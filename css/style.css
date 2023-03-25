@@ -8,7 +8,6 @@
 body {
 	color: #000;
 	font: 400 15px/22px 'Popins', 'Arial', 'Helvetica', sans-serif;
-
 }
 a {
 	color: inherit;
@@ -54,8 +53,8 @@ align-items: center;
 padding: 20px, 0;
 }
 .header-nav__item{
+	font: 400 18px/22px 'Montserrat', sans-serif;
 	display: inline-block;
-	font-size: 18px;
 	margin-right: 30px;
 }
 .header-nav__item:last-child{
@@ -111,7 +110,7 @@ padding: 20px, 0;
 	margin-top: 20px;
 }
 .banner__link{
-	width: 200px;
+	font: 500 18px/22px 'Montserrat', sans-serif;
 	padding: 5px 58px;
 }
 
