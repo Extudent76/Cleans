@@ -30,9 +30,8 @@ button{
 	transition: .4s;
 }
 .container{
-	max-width: 1140px;
+	max-width: 1440px;
 	margin:  0 135px;
-	padding: 0 5px;
 }
 .btn-primary{
 	color: #fff;
@@ -65,27 +64,27 @@ padding: 20px, 0;
   align-items: center;
   justify-content: center;
 }
-.header-user__item{
-	display: inline-block;
-	margin-right: 15px;
+
+.header-user__item span{
+	font-family: 'Montserrat';
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 22px;
+}
+.header-user__item img{
+	margin-right: 10px;
+	padding-right: 5.83px;
 }
 .header-user__icon{
 	display: flex;
 	justify-content: center;
 }
-.header-user__item:last-child{
-	margin-right: 0;
-	font-size: 18px;
-}
-.header-user__btn{
-	width: 150px;
-	padding: 5px 0;
-}
 /* BANER */
 .banner-warp{
-	padding: 400px 0 343px;
+	padding-bottom: 150px;
 	background: url(../img/header_photo.png);
-	height: 100vh;
+	height: 100%;
+	width: 100%;
  	background-repeat: no-repeat;
  	background-size: cover;
 }
@@ -94,6 +93,7 @@ padding: 20px, 0;
 	margin-right: 90px;
 	margin-left: 835px;
 	color: #fff;
+	padding-top: 400px;
 }
 .banner__text{
 	display: block;
