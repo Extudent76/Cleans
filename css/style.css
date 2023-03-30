@@ -98,7 +98,7 @@ padding: 20px, 0;
 /* BANER */
 .banner-warp{
 	padding-bottom: 150px;
-	background: url(../img/header_photo.png);
+	background: url(img/header_photo.png);
 	background-repeat: no-repeat;
 	max-width: 1440px;
 	height: 100%;
