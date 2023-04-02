@@ -28,6 +28,7 @@ button{
 	cursor: pointer;
 	transition: .4s;
 }
+
 .container{
 	max-width: 1440px;
 	height: 100%;
@@ -46,11 +47,30 @@ button{
 	background-color:rgba(83, 168, 53, 0.85)
 }
 /* HEADER*/
+.header-menu{
+	position: fixed;
+	display: block;
+	width: 100%;
+	padding-left: 8.438em;
+	padding-right: 8.438em;
+	background-color: #fff;
+}
 .header {
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 20px, 0;
+background-color: #fff;
+flex-direction: row;
+padding-left: 8.438em;
+padding-right: 8.438em;
+margin-right: -8.438em;
+margin-left: -8.438em;
+grid-column-gap: 4.3em;
+}
+.container_menu{
+	max-width: 1440px;
+	margin-right: auto;
+	margin-left: auto;
 }
 .header-nav__item{
 	font: 400 18px/22px 'Montserrat', sans-serif;
