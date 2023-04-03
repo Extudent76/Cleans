@@ -84,7 +84,7 @@ grid-column-gap: 4.3em;
   position: absolute;
   width: 100%;
   height: 3px;
-  background-color: #D4920D;
+  background-color: #EE8100;
   transition: 0.2s;
 	transform: scaleX(0);
 }
@@ -92,7 +92,7 @@ grid-column-gap: 4.3em;
   transform: scaleX(1);
 }
 .header-nav__item-link:hover{
-	color: #B57900;
+	color: #EE8100;
 }
 
 .header-user {
