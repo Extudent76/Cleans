@@ -53,6 +53,7 @@ button{
 	display: block;
 	width: 100%;
 	background-color: #fff;
+	z-index: 999;
 }
 .header {
 display: flex;
@@ -63,6 +64,7 @@ flex-direction: row;
 padding-left: 9em;
 padding-right: 9em;
 grid-column-gap: 4.3em;
+
 }
 .container_menu{
 	max-width: 1440px;
@@ -160,6 +162,76 @@ grid-column-gap: 4.3em;
 	padding-left: 58px;
 	padding-right: 59px;
 }
+/* about us*/
+.section{
+	display: block;
+	padding-right: 9em;
+	padding-left: 9em;
+}
+.about-us-warp-header{
+	margin-bottom: 3.33331em;
+	margin-right: auto;
+	margin-left: auto;
+	width: 33em;
+}
+.about-us-warp-header h2{
+font-family: 'Golos Text';
+font-size: 60px;
+font-weight: 700;
+line-height: 72px;
+}
+.about-us-warp-cards{
+	display: flex;
+	grid-column-gap: 2.7777777777777777em;
+	margin-bottom: 4.1em;
+}
+.about-us-warp-card{
+	display: flex;
+    width: 18em;
+    height: 26.7em;
+    padding-top: 2em;
+    padding-right: 2.2em;
+    padding-left: 1.2em;
+    flex-direction: column;
+		transition: 0.3s;
+}
+.about-us-warp-card-header{
+margin-bottom: 2.6814em;
+}
+.card-number{
+font-family: 'Golos Text';
+font-size: 40px;
+font-weight: 600;
+line-height: 48px;
+}
+.about-us-warp-card-header-3{
+	padding-bottom: 2.75em;
+}
+.about-us-warp-card-header-4{
+	padding-bottom: 4.734em;
+}
+.about-us-warp-card-header-4 h3 {
+	font-family: 'Golos Text';
+	font-size: 25px;
+	font-weight: 500;
+	line-height: 30px;
+}
+.about-us-warp-card-header-3 h3{
+	font-family: 'Golos Text';
+	font-size: 25px;
+	font-weight: 500;
+	line-height: 30px;
+}
+.about-us-warp-card p{
+	font-family: 'Golos Text';
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 24px;
+}
+.about-us-warp-card:hover{
+	color: #fff;
+	background-color: #F98500;
+} 
 
 
 
