@@ -22,7 +22,6 @@ ul li {
 }
 button{
 	display: block;
-	border: none;
 	font: inherit;
 	background-color: transparent;
 	cursor: pointer;
@@ -173,6 +172,83 @@ grid-column-gap: 4.3em;
 	padding-left: 58px;
 	padding-right: 59px;
 }
+/* about-cleans*/
+.about-cleans_container {
+  display: flex;
+  align-items: row;
+	margin-bottom: 93px;
+}
+.about-cleans_img{
+		position: relative;
+		height: auto;
+		margin-right: 61px;
+		box-shadow: 6px 6px 10px 0px #00000040;
+		border-radius: 17px;
+		transition: all 0.4s ease;
+}
+.about-cleans_img:hover{
+	height: auto;
+	margin-right: 61px;
+	border-radius: 17px;
+	box-shadow: none; 
+}
+.about-cleans_block-img{
+	position: relative;
+  display: inline-block;
+}
+.about-cleans_block-img h2{
+  position: absolute;
+	font: 900 25px/30.48px 'Montserrat', sans-serif;
+  top: 0;
+  left: 0;
+  padding-top: 24px;
+	padding-left: 35px;
+  color: #DFE4EB;
+}
+
+.about-cleans_block-img p{
+  position: absolute;
+	font: 800 13px/15.85px 'Montserrat', sans-serif;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 20px;
+	padding-left: 35px;
+  color: #DFE4EB;
+}
+.arrow-icon{
+	position: absolute;
+	bottom: 20px;
+	right: 97px;
+	z-index: 1;
+	transition: all 0.4s ease;
+	transform: translateX(0);
+}
+.about-cleans_img:hover + .arrow-icon{
+	transform: translateX(5px);
+}
+
+.header-text_about-cleans{
+	font: 700 70px/84px 'Golos Text';
+	margin-top: 50px;
+	margin-bottom: 9px;
+}
+.description-text_about-cleans{
+	font: 400 18px/21.6px 'Golos Text';
+	margin-bottom: 27px;
+	width: 400px;
+}
+.btn_about-cleans{
+	font: 500 18px/22px 'Montserrat', sans-serif;
+	color: #CA6D20;
+	height: 45px;
+	width: 217px;
+	border-radius: 22px;
+	border:2px solid #FD7E14;
+}
+.btn_about-cleans:hover{
+	color: #ffff;
+	background-color: #FD7E14;
+}
 /* about us*/
 .section{
 	display: block;
@@ -182,7 +258,6 @@ grid-column-gap: 4.3em;
 .about-us-warp-header{
 	margin-bottom: 3.33331em;
 	margin-right: auto;
-	margin-left: auto;
 	width: 33em;
 }
 .about-us-warp-header h2{
@@ -193,21 +268,31 @@ line-height: 72px;
 }
 .about-us-warp-cards{
 	display: flex;
-	grid-column-gap: 2.7777777777777777em;
+	grid-column-gap: 2em;
 	margin-bottom: 4.1em;
 }
 .about-us-warp-card{
 	display: flex;
     width: 18em;
-    height: 26.7em;
-    padding-top: 2em;
-    padding-right: 2.2em;
-    padding-left: 1.2em;
+    height: 23.8em;
+    padding-top: 0.87em;
+    padding-right: 2em;
+    padding-left: 1.269em;
+    flex-direction: column;
+		transition: 0.3s;
+}
+.about-us-warp-card:first-child{
+	display: flex;
+    width: 18em;
+    height: 23.8em;
+    padding-top: 0.87em;
+    padding-right: 0.739em;
+    padding-left: 1.269em;
     flex-direction: column;
 		transition: 0.3s;
 }
 .about-us-warp-card-header{
-margin-bottom: 2.6814em;
+margin-bottom: 2.66em;
 }
 .card-number{
 font-family: 'Golos Text';
@@ -216,7 +301,7 @@ font-weight: 600;
 line-height: 48px;
 }
 .about-us-warp-card-header-3{
-	padding-bottom: 2.75em;
+	padding-bottom: 2.69em;
 }
 .about-us-warp-card-header-4{
 	padding-bottom: 4.734em;
@@ -235,9 +320,19 @@ line-height: 48px;
 }
 .about-us-warp-card p{
 	font-family: 'Golos Text';
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 400;
-	line-height: 24px;
+	line-height: 21.6px;
+	width: 219px;
+	height: 134px;
+}
+.about-us-warp-card:first-child p{
+	font-family: 'Golos Text';
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 21.6px;
+	width: 240px;
+	height: 147px;
 }
 .about-us-warp-card:hover{
 	color: #fff;
