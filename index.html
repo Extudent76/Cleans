@@ -6,6 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Cleans</title>
 	<link rel="icon" href="favicon.ico">
+
+	<script src="/libs/gsap/gsap.min.js" defer></script>
+	<script src="/libs/gsap/ScrollSmoother.min.js" defer></script>
+	<script src="/libs/gsap/ScrollTrigger.min.js" defer></script>
+
+	<script src="/js/app.js" defer></script>
+	<link rel="stylesheet" href="css/style.css">
+
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 	<header id="hero-banner-href" class="header-menu">
@@ -59,112 +67,118 @@
 	</header>
 	<main>
 
-	<section>
-			<div class="banner-warp">
-				<div class="container">
-					<div id="hero-banner" class="banner">
-						<span class="banner__text">EXPERT CARE</span>
-						<b class="banner__trend">OFF THE DIRT</b>
-						<span class="banner__text_ru">Доверьте свою обувь нам.</span>
-						<div class="banner-link-warp">
-							<a href="#" class="banner__link btn-primary"> Заказать </a>
+		<div class="wrapper">
+			<div class="content">
+
+			<section>
+					<div class="banner-warp">
+						<div class="container">
+							<div id="hero-banner" class="banner">
+								<span class="banner__text">EXPERT CARE</span>
+								<b class="banner__trend">OFF THE DIRT</b>
+								<span class="banner__text_ru">Доверьте свою обувь нам.</span>
+								<div class="banner-link-warp">
+									<a href="#" class="banner__link btn-primary"> Заказать </a>
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
+			</section>
+
+			<section>
+					<div class="container">
+						<div class="about-cleans_container">
+							<div class="about-cleans_block-img">
+								<img class="about-cleans_img" src="img/dominik-martin-b2-fBVrfx0o-unsplash 1.png" alt="bg-block">
+								<h2>КОМПЛЕКСНЫЙ <br> ПОДХОД</h2>
+								<p>ПОЗАБОТЬТЕСЬ О СЕБЕ</p>
+								<img class="arrow-icon" src=".//img/Arrow 1.png" alt="arrow">
+							</div>
+							<div class="about-cleans_block-text">
+								<h2 class="header-text_about-cleans">CLEANS</h2>
+								<p class="description-text_about-cleans">– это команда профессионалов, которая специализируется
+									на химчистке обуви. Мы понимаем, что обувь
+										– это не только элемент гардероба,
+									но и зеркало Вашей личной гигиены.</p>
+								<button class="btn_about-cleans">Смотреть услуги</button>
+							</div>
+						</div>
+						
+					</div>
+			</section>
+
+			<section>
+					<div class="container">
+						<div id="about-us-warp-href" class="about-us-warp">
+							<div class="about-us-warp-header">
+										<h2>ПОЧЕМУ СТОИТ</h2>
+										<h2>ВЫБРАТЬ НАС?</h2>
+							</div>
+							<div class="about-us-warp-cards">
+								<div class="about-us-warp-card">
+									<div class="about-us-warp-card-header">
+										<div class="card-number">1</div>
+									</div>
+									<div class="about-us-warp-card-header-3">
+										<h3>Качество обслуживания</h3>
+									</div>
+									<p>Мы обеспечиваем высокое качество химчистки обуви,
+										которое невозможно достичь при использовании домашних средств</p>
+
+								</div>
+
+								<div class="about-us-warp-card">
+
+									<div class="about-us-warp-card-header">
+										<div class="card-number">2</div>
+									</div>
+
+									<div class="about-us-warp-card-header-4">
+										<h3>Мастерство</h3>
+									</div>
+
+									<p>Наша команда профессионалов обладает многолетним
+										опытом и знаниями в области химчистки обуви</p>
+
+								</div>
+
+								<div class="about-us-warp-card">
+
+									<div class="about-us-warp-card-header">
+										<div class="card-number">3</div>
+									</div>
+
+									<div class="about-us-warp-card-header-4">
+										<h3>Удобство</h3>
+									</div>
+
+									<p>Наш сервис предоставляет удобный способ оформления заказа
+										и очистки обуви, которые экономят время клиентов</p>
+
+								</div>
+
+								<div class="about-us-warp-card">
+
+									<div class="about-us-warp-card-header">
+										<div class="card-number">4</div>
+									</div>
+
+									<div class="about-us-warp-card-header-4">
+										<h3>Экологичность</h3>
+									</div>
+
+									<p>Наша химчистка использует только безопасные
+										и экологически чистые средства для химчистки обуви</p>
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+			</section>
+
 			</div>
-	</section>
-
-	<section>
-			<div class="container">
-				<div class="about-cleans_container">
-					<div class="about-cleans_block-img">
-						<img class="about-cleans_img" src="img/dominik-martin-b2-fBVrfx0o-unsplash 1.png" alt="bg-block">
-						<h2>КОМПЛЕКСНЫЙ <br> ПОДХОД</h2>
-						<p>ПОЗАБОТЬТЕСЬ О СЕБЕ</p>
-						<img class="arrow-icon" src=".//img/Arrow 1.png" alt="arrow">
-					</div>
-					<div class="about-cleans_block-text">
-						<h2 class="header-text_about-cleans">CLEANS</h2>
-						<p class="description-text_about-cleans">– это команда профессионалов, которая специализируется
-							на химчистке обуви. Мы понимаем, что обувь
-								– это не только элемент гардероба,
-							но и зеркало Вашей личной гигиены.</p>
-						<button class="btn_about-cleans">Смотреть услуги</button>
-					</div>
-				</div>
-				
-			</div>
-	</section>
-
-	<section>
-			<div class="container">
-				<div id="about-us-warp-href" class="about-us-warp">
-					<div class="about-us-warp-header">
-								<h2>ПОЧЕМУ СТОИТ</h2>
-								<h2>ВЫБРАТЬ НАС?</h2>
-					</div>
-					<div class="about-us-warp-cards">
-						<div class="about-us-warp-card">
-							<div class="about-us-warp-card-header">
-								<div class="card-number">1</div>
-							</div>
-							<div class="about-us-warp-card-header-3">
-								<h3>Качество обслуживания</h3>
-							</div>
-							<p>Мы обеспечиваем высокое качество химчистки обуви,
-								 которое невозможно достичь при использовании домашних средств</p>
-
-						</div>
-
-						<div class="about-us-warp-card">
-
-							<div class="about-us-warp-card-header">
-								<div class="card-number">2</div>
-							</div>
-
-							<div class="about-us-warp-card-header-4">
-								<h3>Мастерство</h3>
-							</div>
-
-							<p>Наша команда профессионалов обладает многолетним
-								 опытом и знаниями в области химчистки обуви</p>
-
-						</div>
-
-						<div class="about-us-warp-card">
-
-							<div class="about-us-warp-card-header">
-								<div class="card-number">3</div>
-							</div>
-
-							<div class="about-us-warp-card-header-4">
-								<h3>Удобство</h3>
-							</div>
-
-							<p>Наш сервис предоставляет удобный способ оформления заказа
-								 и очистки обуви, которые экономят время клиентов</p>
-
-						</div>
-
-						<div class="about-us-warp-card">
-
-							<div class="about-us-warp-card-header">
-								<div class="card-number">4</div>
-							</div>
-
-							<div class="about-us-warp-card-header-4">
-								<h3>Экологичность</h3>
-							</div>
-
-							<p>Наша химчистка использует только безопасные
-								 и экологически чистые средства для химчистки обуви</p>
-
-						</div>
-
-					</div>
-				</div>
-			</div>
-	</section>
+		</div>
 
 	</main>
 </body>
