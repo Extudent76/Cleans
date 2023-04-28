@@ -133,7 +133,7 @@ grid-column-gap: 4.3em;
 /* BANER */
 .banner-warp{
 	padding-bottom: 150px;
-	background: url(../img/header_photo.png);
+	background: url(../img/banner/header_photo.png);
 	background-repeat: no-repeat;
 	max-width: 1440px;
 	height: 100%;
@@ -264,7 +264,7 @@ grid-column-gap: 4.3em;
 	margin-right: auto;
 	width: 33em;
 }
-.about-us-warp-header h2{
+.title-section h2{
 font-family: 'Golos Text';
 font-size: 60px;
 font-weight: 700;
@@ -273,7 +273,7 @@ line-height: 72px;
 .about-us-warp-cards{
 	display: flex;
 	grid-column-gap: 2em;
-	margin-bottom: 4.1em;
+	margin-bottom: 4em;
 }
 .about-us-warp-card{
 	display: flex;
@@ -342,6 +342,175 @@ line-height: 48px;
 	color: #fff;
 	background-color: #FD7E14;
 } 
-
-
-
+/* Services*/
+.Services-header{
+	margin-bottom: 3.33331em;
+	margin-right: auto;
+	width: 33em;
+}
+.Services-nav__items{
+	margin-bottom: 3.333333em;
+}
+.Services-nav__item{
+	font: 400 25px/30px 'Montserrat', sans-serif;
+	display: inline-block;
+	margin-right: 79px;
+}
+.Services-nav__item:last-child{
+	margin-right: 0;
+}
+.Services-nav__item-link::before{
+  content: '';
+  bottom: -18px;
+  right: 0;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #EE8100;
+  transition: 0.2s;
+	transform: scaleX(0);
+}
+.Services-nav__item-link:hover:before {
+  transform: scaleX(1);
+}
+.Services-nav__item-link:hover{
+	color: #EE8100;
+}
+.w-tab-pane {
+	position: relative;
+	display: none;
+}
+.w--tab-active {
+	display: block;
+}
+.price-block-01{
+	position: relative;
+	display: flex;
+	height: 36em;
+	margin-bottom: 4em;
+	padding: 4.5em 4.67em 5.33em 4.67em;
+	flex-direction: row;
+	grid-column-gap: 6.5em;
+	background-color: #2f2f2f;
+}
+.price-block-01-left{
+	width: 40.97em;
+}
+.price-block-01-left-header{
+	width: 24em;
+	display: block;
+  margin-bottom: 4em;
+}
+.card-header{
+	font: 700 40.5px/49px 'Montserrat', sans-serif;
+	color: #fff;
+}
+.price-block-01-left-content{
+	display: flex;
+	margin-bottom: 1.3em;
+	justify-content: flex-start;
+}
+.price-block-01-left-content-1-1 {
+	width: 25em;
+}
+.body-text-white {
+	color: #fff;
+	font: 15px/21px 'Montserrat', sans-serif;
+}
+.text-span-5{
+	font-weight: 600;
+}
+.price-block-01-left-content-1-2 {
+	display: flex;
+	align-items: center;
+}
+.price-block-01-left-content-1-2-price {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+}
+.card-price {
+	color: #fff;
+	font: 700 33px/40px 'Montserrat', sans-serif;
+}
+.ruble-price-01-block{
+	display: flex;
+    height: 100%;
+    padding-bottom: 0.3em;
+    padding-left: 0.55em;
+    align-items: flex-end;
+}
+.price-text-white{
+	color: #fff;
+	font: 400 18px/25px 'Montserrat', sans-serif;
+}
+.price-block-01-left-line{
+	margin-bottom: 1.3em;
+	border-top: 0.5px dashed #fff;
+}
+.price-block-01-right-time{
+	display: flex;
+	padding-bottom: 2em
+}
+.price-block-01-right-time-1{
+	color: #fff;
+	white-space: nowrap;
+	font: 700 82.5px/82px 'Montserrat', sans-serif;
+}
+.price-block-01-right-time-2{
+	padding-top: 1em;
+	padding-left: 0.5em;
+}
+.body-text-white-2 {
+	padding-bottom: 0.5em;
+	color: #fff;
+	font: 19.5px/20px 'Montserrat', sans-serif;
+}
+.text-span-6{
+	font-weight: 700;
+}
+.price-block-02{
+	position: relative;
+	display: flex;
+	height: 36em;
+	margin-bottom: 4em;
+	padding: 4.5em 4.67em 5.33em 4.67em;
+	flex-direction: row;
+	grid-column-gap: 6.5em;
+	background-color: #604E4E;
+}
+.price-block-03{
+	position: relative;
+	display: flex;
+	height: 36em;
+	margin-bottom: 4em;
+	padding: 4.5em 4.67em 5.33em 4.67em;
+	flex-direction: row;
+	grid-column-gap: 6.5em;
+	background: linear-gradient(180deg, #223988 0%, #80111B 100%);
+}
+.price-block-02-left-content {
+	display: flex;
+	margin-bottom: 2em;
+	justify-content: flex-start;
+}
+.price-block-04{
+	position: relative;
+	display: flex;
+	height: 36em;
+	margin-bottom: 4em;
+	padding: 4.5em 4.67em 5.33em 4.67em;
+	flex-direction: row;
+	grid-column-gap: 6.5em;
+	background-color: #226DFF;
+}
+.price-block-05{
+	position: relative;
+	display: flex;
+	height: 36em;
+	margin-bottom: 4em;
+	padding: 4.5em 4.67em 5.33em 4.67em;
+	flex-direction: row;
+	grid-column-gap: 6.5em;
+	background-color: #698498;
+}
