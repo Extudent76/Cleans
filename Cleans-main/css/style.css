@@ -302,6 +302,7 @@ path {transition: fill .4s ease;}
 	background-color: #EE8100;
 	border-radius: 8px;
 	border: none;
+	font-weight: 700;
 	font-family: Montserrat;
 	font-size: 14px;
 	color: #fff;
@@ -351,6 +352,183 @@ path {transition: fill .4s ease;}
 	cursor: pointer;
 }
 
+.input-box3 input{
+
+	position: absolute;
+	margin-left: 40px;
+	padding-left: 20px;
+	font-size: 18px;
+	width: 326px;
+	height: 56px;
+	border: none;
+	outline: none;
+	display: flex;
+	border: 1px solid #01C699;
+	border-radius: 8px;
+}
+.input-box4 input{
+
+	position: absolute;
+	margin-left: 40px;
+	padding-left: 20px;
+	font-size: 18px;
+	width: 326px;
+	height: 56px;
+	border: none;
+	outline: none;
+	display: flex;
+	border: 1px solid #01C699;
+	border-radius: 8px;
+}
+
+#REGISTER-BLOCK .input-box1{
+	box-sizing: border-box;
+	padding: 5px 0px 0px -40px;
+	right: 200px;
+	color: #fff;
+	justify-content: center;
+	align-content: center;
+	font-size: 16px;
+	font-style: normal;
+	line-height: 22px;
+	font-weight: 700;
+	position: relative;
+	width: 60%;
+	height: 50px;
+	margin: 3px 0px 0px 70px;
+}
+
+#REGISTER-BLOCK .input-box2{
+	box-sizing: border-box;
+	padding: 5px 0px 0px -40px;
+	left: 145px;
+	bottom: 108px;
+	color: #fff;
+	justify-content: center;
+	align-content: center;
+	font-size: 16px;
+	font-style: normal;
+	line-height: 22px;
+	font-weight: 700;
+	position: relative;
+	width: 60%;
+	height: 50px;
+	margin: 3px 0px 0px 70px;
+
+}
+#REGISTER-BLOCK .input-box3{
+	box-sizing: border-box;
+	padding: 5px 0px 0px -40px;
+	right: 130px;
+	bottom: 40px;
+	color: #fff;
+	justify-content: center;
+	align-content: center;
+	font-size: 16px;
+	font-style: normal;
+	line-height: 22px;
+	font-weight: 700;
+	position: relative;
+	width: 60%;
+	height: 50px;
+	margin: 3px 0px 0px 70px;
+
+}
+#REGISTER-BLOCK .input-box4{
+	box-sizing: border-box;
+	padding: 5px 0px 0px -40px;
+	left: 215px;
+	bottom: 93px;
+	color: #fff;
+	justify-content: center;
+	align-content: center;
+	font-size: 16px;
+	font-style: normal;
+	line-height: 22px;
+	font-weight: 700;
+	position: relative;
+	width: 60%;
+	height: 50px;
+	margin: 3px 0px 0px 70px;
+
+}
+
+.input-box3 label{
+	position: absolute;
+	padding-bottom: 15px;
+	margin-top: 7px;
+	left: 40px;
+	top: -50%;
+	transform: translateY(-50%);
+}
+
+.input-box4 label{
+	position: absolute;
+	left: 40px;
+	top: -50%;
+	transform: translateY(-50%);
+}
+
+#REGISTER-BLOCK .input-box1 label{
+	position: absolute;
+	margin-top: -5px;
+	left: 110px;
+	top: -12%;
+	transform: translateY(-50%);
+}
+
+#REGISTER-BLOCK .input-box2 label{
+	position: absolute;
+	margin-top: -5px;
+	left: 110px;
+	top: -25%;
+	transform: translateY(-50%);
+}
+
+.back{
+	position: absolute;
+	left: -110px;
+}
+
+#REGISTER-BLOCK .login-register{
+	position: absolute;
+	left: 47%;
+	top: 90%;
+}
+#REGISTER-BLOCK .btn{
+	font-family: Montserrat;
+	position: relative;
+	left: 30%;
+	top: 20px;
+}
+
+#REGISTER-BLOCK .input-box2 input{
+	position: relative;
+	margin-left: 40px;
+	padding-left: 20px;
+	font-size: 18px;
+	width: 326px;
+	height: 56px;
+	border: none;
+	outline: none;
+	display: flex;
+	border: 1px solid #01C699;
+	border-radius: 8px;
+}
+
+#REGISTER-BLOCK .input-box1 input{
+	position: relative;
+	margin-left: 40px;
+	padding-left: 20px;
+	font-size: 18px;
+	width: 326px;
+	height: 56px;
+	border: none;
+	outline: none;
+	display: flex;
+	border: 1px solid #01C699;
+	border-radius: 8px;
+}
 
 
 /* BANER */
