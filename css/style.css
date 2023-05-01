@@ -116,19 +116,420 @@ grid-column-gap: 4.3em;
 	margin-right: 10px;
 }
 
-.header-user__icon:hover svg path {
-	fill: #F98500;
-	}
+path {transition: fill .4s ease;}
+
+.header-user__icon path{
+	fill: #22262A;
+}
 	
-	.header-user__icon:hover span {
-	color: #F98500;
-	}
+.header-user__icon:hover path {
+	fill: #F98500;
+}
 
 .header-user__icon{
+	left: -40px;
+	bottom: 25px;
 	display: flex;
 	align-items: center;
 	cursor: pointer;
 }
+
+.regButton{
+	height: 25px;
+	border: none;
+	font-family: 'Montserrat';
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 22px;
+	
+}
+
+.regButton:hover {
+	color: #EE8100;
+	transition: cubic-bezier(5,.7,3,1);
+	transition-delay: 0s;
+}
+
+
+#LOGIN-BLOCK{
+	font-family: Montserrat;
+	position: absolute;
+	width: 700px;
+	height: 600px;
+	margin: 100px auto;
+	background-color: transparent;
+	border-radius: 20px;
+	z-index: 16000;
+	position: fixed;
+	display: none;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}	
+
+#gray{
+	background-color: rgba(28,29,33, 0.87);
+	position: fixed;
+	display: none;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 15000;
+}
+
+.form-box h2{
+	position: relative;
+	text-align: center;
+	font-size: 69px;
+	color: #fff;
+	width: 100%;
+	padding: 100px;
+	margin: 0px 130px 0px 0px;
+}
+
+.form-box{
+	text-align: center;
+	position: relative;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.input-box1 {
+	box-sizing: border-box;
+	padding: 5px 0px 0px 70px;
+	padding-bottom: 100px;
+	color: #fff;
+	justify-content: center;
+	align-content: center;
+	font-size: 16px;
+	font-style: normal;
+	line-height: 22px;
+	font-weight: 700;
+	position: relative;
+	width: 60%;
+	height: 50px;
+	margin: 3px 0px 0px 70px;
+}
+
+.input-box2{
+	box-sizing: border-box;
+	padding: 5px 0px 0px 70px;
+	color: #fff;
+	justify-content: center;
+	align-content: center;
+	font-size: 16px;
+	font-style: normal;
+	line-height: 22px;
+	font-weight: 700;
+	position: relative;
+	width: 60%;
+	height: 50px;
+	margin: 3px 0px 0px 70px;
+
+}
+
+.input-box1 label{
+	position: absolute;
+	margin-top: 5px;
+	left: 110px;
+	top: -20%;
+	transform: translateY(-50%);
+}
+
+.input-box1 input{
+	position: relative;
+	margin-left: 40px;
+	padding-left: 20px;
+	font-size: 18px;
+	width: 326px;
+	height: 56px;
+	border: none;
+	outline: none;
+	display: flex;
+	border: 1px solid #FD7E14;
+	border-radius: 8px;
+}
+
+.input-box2 label{
+	position: absolute;
+	margin-top: -5px;
+	left: 110px;
+	top: -20%;
+	transform: translateY(-50%);
+}
+
+.input-box2 input{
+	position: relative;
+	margin-left: 40px;
+	padding-left: 20px;
+	font-size: 18px;
+	width: 326px;
+	height: 56px;
+	border: none;
+	outline: none;
+	display: flex;
+	border: 1px solid #FD7E14;
+	border-radius: 8px;
+}
+
+.forgot-password-email{
+	font-family: Montserrat;
+	font-size: 18px;
+	color: #999999;
+	justify-content: center;
+	position: absolute;
+	left: 50%;
+	margin-right: -50%;
+	bottom: -2%;
+	transform: translate(-50%, -50%);
+}
+
+.login-register{
+	font-family: Montserrat;
+	font-size: 18px;
+	color: #999999;
+	position: absolute;
+	left: 50%;
+	margin-right: -50%;
+	bottom: -12%;
+	transform: translate(-50%, -50%);
+}
+
+.btn{
+	background-color: #EE8100;
+	border-radius: 8px;
+	border: none;
+	font-weight: 700;
+	font-family: Montserrat;
+	font-size: 14px;
+	color: #fff;
+	padding: 16px 65px 16px 65px;
+	position: relative;
+	bottom: -140px;
+	left: 257px;
+}
+
+.close{
+	cursor: pointer;
+	width: 18px;
+	height: 18px;
+	position: relative;
+	left: 95%;
+	top: 1%;
+	z-index: 16000;
+}
+
+.back{
+	cursor: pointer;
+	z-index: 16000;
+}
+
+#REGISTER-BLOCK{
+	font-family: Montserrat;
+	position: absolute;
+	width: 700px;
+	height: 600px;
+	margin: 100px auto;
+	background-color: transparent;
+	border-radius: 20px;
+	z-index: 16000;
+	position: fixed;
+	display: none;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.login-link{
+	cursor: pointer;
+}
+
+.register-link{
+	cursor: pointer;
+}
+
+.input-box3 input{
+
+	position: absolute;
+	margin-left: 40px;
+	padding-left: 20px;
+	font-size: 18px;
+	width: 326px;
+	height: 56px;
+	border: none;
+	outline: none;
+	display: flex;
+	border: 1px solid #01C699;
+	border-radius: 8px;
+}
+.input-box4 input{
+
+	position: absolute;
+	margin-left: 40px;
+	padding-left: 20px;
+	font-size: 18px;
+	width: 326px;
+	height: 56px;
+	border: none;
+	outline: none;
+	display: flex;
+	border: 1px solid #01C699;
+	border-radius: 8px;
+}
+
+#REGISTER-BLOCK .input-box1{
+	box-sizing: border-box;
+	padding: 5px 0px 0px -40px;
+	right: 200px;
+	color: #fff;
+	justify-content: center;
+	align-content: center;
+	font-size: 16px;
+	font-style: normal;
+	line-height: 22px;
+	font-weight: 700;
+	position: relative;
+	width: 60%;
+	height: 50px;
+	margin: 3px 0px 0px 70px;
+}
+
+#REGISTER-BLOCK .input-box2{
+	box-sizing: border-box;
+	padding: 5px 0px 0px -40px;
+	left: 145px;
+	bottom: 108px;
+	color: #fff;
+	justify-content: center;
+	align-content: center;
+	font-size: 16px;
+	font-style: normal;
+	line-height: 22px;
+	font-weight: 700;
+	position: relative;
+	width: 60%;
+	height: 50px;
+	margin: 3px 0px 0px 70px;
+
+}
+#REGISTER-BLOCK .input-box3{
+	box-sizing: border-box;
+	padding: 5px 0px 0px -40px;
+	right: 130px;
+	bottom: 40px;
+	color: #fff;
+	justify-content: center;
+	align-content: center;
+	font-size: 16px;
+	font-style: normal;
+	line-height: 22px;
+	font-weight: 700;
+	position: relative;
+	width: 60%;
+	height: 50px;
+	margin: 3px 0px 0px 70px;
+
+}
+#REGISTER-BLOCK .input-box4{
+	box-sizing: border-box;
+	padding: 5px 0px 0px -40px;
+	left: 215px;
+	bottom: 93px;
+	color: #fff;
+	justify-content: center;
+	align-content: center;
+	font-size: 16px;
+	font-style: normal;
+	line-height: 22px;
+	font-weight: 700;
+	position: relative;
+	width: 60%;
+	height: 50px;
+	margin: 3px 0px 0px 70px;
+
+}
+
+.input-box3 label{
+	position: absolute;
+	padding-bottom: 15px;
+	margin-top: 7px;
+	left: 40px;
+	top: -50%;
+	transform: translateY(-50%);
+}
+
+.input-box4 label{
+	position: absolute;
+	left: 40px;
+	top: -50%;
+	transform: translateY(-50%);
+}
+
+#REGISTER-BLOCK .input-box1 label{
+	position: absolute;
+	margin-top: -5px;
+	left: 110px;
+	top: -12%;
+	transform: translateY(-50%);
+}
+
+#REGISTER-BLOCK .input-box2 label{
+	position: absolute;
+	margin-top: -5px;
+	left: 110px;
+	top: -25%;
+	transform: translateY(-50%);
+}
+
+.back{
+	position: absolute;
+	left: -110px;
+}
+
+#REGISTER-BLOCK .login-register{
+	position: absolute;
+	left: 47%;
+	top: 90%;
+}
+#REGISTER-BLOCK .btn{
+	font-family: Montserrat;
+	position: relative;
+	left: 30%;
+	top: 20px;
+}
+
+#REGISTER-BLOCK .input-box2 input{
+	position: relative;
+	margin-left: 40px;
+	padding-left: 20px;
+	font-size: 18px;
+	width: 326px;
+	height: 56px;
+	border: none;
+	outline: none;
+	display: flex;
+	border: 1px solid #01C699;
+	border-radius: 8px;
+}
+
+#REGISTER-BLOCK .input-box1 input{
+	position: relative;
+	margin-left: 40px;
+	padding-left: 20px;
+	font-size: 18px;
+	width: 326px;
+	height: 56px;
+	border: none;
+	outline: none;
+	display: flex;
+	border: 1px solid #01C699;
+	border-radius: 8px;
+}
+
 
 /* BANER */
 .banner-warp{
@@ -169,12 +570,15 @@ grid-column-gap: 4.3em;
 	margin-top: 20px;
 }
 .banner__link{
+	background-color: transparent;
+	border: 2px solid #53A835;
 	font: 500 18px/22px 'Montserrat', sans-serif;
 	padding-top: 6px;
 	padding-bottom: 7px;
 	padding-left: 58px;
 	padding-right: 59px;
 }
+
 /* about-cleans*/
 .about-cleans_container {
   display: flex;
@@ -355,6 +759,7 @@ line-height: 48px;
 	font: 400 25px/30px 'Montserrat', sans-serif;
 	display: inline-block;
 	margin-right: 79px;
+	position: relative;
 }
 .Services-nav__item:last-child{
 	margin-right: 0;
@@ -370,10 +775,26 @@ line-height: 48px;
   transition: 0.2s;
 	transform: scaleX(0);
 }
+
+
+.Services-nav__item.active::after{
+	content: '';
+  	position: absolute;
+	left: 0;
+	bottom: -18px;
+  	width: 100%;
+  	height: 3px;
+  	background-color: #EE8100;
+}
+.Services-nav ul li.active {
+	color: #EE8100;
+}
+
+
 .Services-nav__item-link:hover:before {
   transform: scaleX(1);
 }
-.Services-nav__item-link:hover{
+.Services-nav__item-link:hover{ 
 	color: #EE8100;
 }
 .w-tab-pane {
