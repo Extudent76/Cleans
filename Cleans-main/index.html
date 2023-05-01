@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cleans</title>
+	<link rel="icon" href="favicon.ico">
+	<script src="/libs/gsap.min.js" defer></script>
+	<script src="/libs/ScrollSmoother.min.js" defer></script>
+	<script src="/libs/ScrollTrigger.min.js" defer></script>
+	<script src="js/login_animation.js" defer></script>
+	<script src="js/scriptsServices.js" defer></script>
+	<script src="/js/app.js" defer></script>
+	<script src="js/scriptsLogin.js" defer></script>
+	<script src="js/scriptsChangeLogReg.js" defer></script>
+	<link rel="stylesheet" href="css/style.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	<header id="hero-banner-href" class="header-menu">
+		<div class="container_menu">
+				<div class="header-price-wrapper">
+					<div class="header">
+				<a href="#hero-banner"><img class="header__title" src="img/header-menu/LOGO CLEANS.png" alt=""></a>
+				<nav class="header-nav">
+					<ul>
+							<li class="header-nav__item">
+									<a class="header-nav__item-link" href="#hero-banner">ГЛАВНАЯ</a>
+							</li>
+							<li class="header-nav__item">
+								<a class="header-nav__item-link" href="#about-us-warp-href">О НАС</a>
+							</li>
+							<li class="header-nav__item">
+								<a class="header-nav__item-link" href="#Serv">УСЛУГИ</a>
+							</li>
+							<li class="header-nav__item">
+								<a class="header-nav__item-link" href="#">ОТЗЫВЫ</a>
+							</li>
+							<li class="header-nav__item">
+								<a class="header-nav__item-link" href="#">ЗАКАЗАТЬ</a>
+							</li>
+					</ul>
+				</nav>
+				<div class="header-user">
+						<div class="header-user__item">
+							<button onclick="show('block')" class="regButton">ВХОД
+								<a class="header-user__icon">
+									<svg width="25" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M12.5 12.5C10.8958 12.5 9.52255 11.9288 8.38019 10.7865C7.23783 9.64411 6.66665 8.27084 6.66665 6.66668C6.66665 5.06251 7.23783 3.68925 8.38019 2.54689C9.52255 1.40452 10.8958 0.833344 12.5 0.833344C14.1041 0.833344 15.4774 1.40452 16.6198 2.54689C17.7621 3.68925 18.3333 5.06251 18.3333 6.66668C18.3333 8.27084 17.7621 9.64411 16.6198 10.7865C15.4774 11.9288 14.1041 12.5 12.5 12.5ZM0.833313 24.1667V20.0833C0.833313 19.257 1.04599 18.4974 1.47133 17.8047C1.89668 17.112 2.46179 16.5833 3.16665 16.2188C4.67359 15.4653 6.20484 14.9002 7.7604 14.5234C9.31595 14.1467 10.8958 13.9583 12.5 13.9583C14.1041 13.9583 15.684 14.1467 17.2396 14.5234C18.7951 14.9002 20.3264 15.4653 21.8333 16.2188C22.5382 16.5833 23.1033 17.112 23.5286 17.8047C23.954 18.4974 24.1666 19.257 24.1666 20.0833V24.1667H0.833313ZM3.74998 21.25H21.25V20.0833C21.25 19.816 21.1831 19.5729 21.0495 19.3542C20.9158 19.1354 20.7396 18.9653 20.5208 18.8438C19.2083 18.1875 17.8837 17.6953 16.5469 17.3672C15.21 17.0391 13.8611 16.875 12.5 16.875C11.1389 16.875 9.78991 17.0391 8.4531 17.3672C7.1163 17.6953 5.79165 18.1875 4.47915 18.8438C4.2604 18.9653 4.08418 19.1354 3.9505 19.3542C3.81682 19.5729 3.74998 19.816 3.74998 20.0833V21.25ZM12.5 9.58334C13.3021 9.58334 13.9887 9.29775 14.5599 8.72657C15.1311 8.15539 15.4166 7.46876 15.4166 6.66668C15.4166 5.86459 15.1311 5.17796 14.5599 4.60678C13.9887 4.0356 13.3021 3.75001 12.5 3.75001C11.6979 3.75001 11.0113 4.0356 10.4401 4.60678C9.8689 5.17796 9.58331 5.86459 9.58331 6.66668C9.58331 7.46876 9.8689 8.15539 10.4401 8.72657C11.0113 9.29775 11.6979 9.58334 12.5 9.58334Z" fill="#22262A"/>
+									</svg>
+							</button>
+							</a>
+						</div>
+				</div>
+					</div>
+				</div>
+		</div>
+	</header>
+
+
+
+<!--
+	***БЛОК РЕГИСТРАЦИИ***
+
+	<div id="enterOrReg" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php">
+      
+          <div class="container">
+              <button type="button" onclick="document.getElementById('enterOrReg').style.display='none'" class="cancelbtn">Закрыть</button>
+      
+              <h1>Войти</h1>
+              
+              
+              <label for="uname"><b>Почта</b></label>
+              <input type="text" name="uname" required>
+      
+              <label for="psw"><b>Пароль</b></label>
+              <input type="password"  name="psw" required>
+                  
+              <span class="psw"> <a href="#">Забыли пароль?</a></span>
+              <!*-- <a href="registration.html">Зарегистрироваться</a> --*   ***ЗДЕСЬ БЫЛ КОМЕНТ***
+			  <button onclick="document.getElementById('reg').style.display='block'">ВХОД</button>
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+              <button type="submit">Продолжить</button>
+          </div>
+        </form>
+      </div>
+
+	<div id="reg" class="modal">
+  
+		<form class="modal-content animate" action="/action_page.php">
+	  
+			<div class="container">
+				<button type="button" onclick="document.getElementById('enterOrReg').style.display='none'" class="cancelbtn">Закрыть</button>
+		
+				<h1>Регистрация</h1>
+		
+				<label for="uname"><b>ФИО</b></label>
+				<input type="text" name="uname" required>
+				
+				<label for="uname"><b>Почта</b></label>
+				<input type="text" name="uname" required>
+		
+				<label for="psw"><b>Пароль</b></label>
+				<input type="password"  name="psw" required>
+		
+				<label for="psw"><b>Повторите пароль</b></label>
+				<input type="password"  name="psw" required>
+					
+				<button type="button" onclick="document.getElementById('reg').style.display='none'" class="cancelbtn">Уже есть аккаунт?</button>
+			</div>
+		
+			<div class="container" style="background-color:#f1f1f1">
+				<button type="submit">Продолжить</button>
+		  	</div>
+		</form>
+	</div>
+
+	*** БЛОК РЕГИСТРАЦИИ *** -->
+
+
+	<main>
+
+		<div class="wrapper">
+			<!-- Другой Блок Регистрации -->
+			<div onclick="show('none')" id="gray"></div>
+			<div id="LOGIN-BLOCK">
+				<img onclick="show('none')" class="close" src="img/header-menu/closeIMG.png" alt="">
+				<div class="form-box">
+					<h2>Войти</h2>
+					<form action="#">
+						<div class="input-box1">
+							<input type="email" required>
+							<label>Почта</label>
+						</div>
+						<div class="input-box2">
+							<input type="password" required>
+							<label>Пароль</label>
+						</div>
+						<div class="forgot-password-email">
+							<a href="#">Забыли пароль?</a>
+						</div>
+						<div class="login-register">
+							<a onclick="showREG('none')" class="register-link">Зарегистрироваться</a>
+						</div>
+						<button type="submit" class="btn">Войти</button>
+					</form>
+				</div>
+			</div>
+			<div id="REGISTER-BLOCK">
+				<img onclick="showREGCLOSE('none')" class="close" src="img/header-menu/closeIMG.png" alt="">
+				<img onclick="showBack('none')" class="back" src="img/header-menu/arrowBackToLog.png" alt="">
+				<div class="form-box">
+					<h2>Регистрация</h2>
+					<form action="#">
+						<div class="input-box1">
+							<input type="Username" required>
+							<label>ФИО</label>
+						</div>
+						<div class="input-box2">
+							<input type="email" required>
+							<label>Почта</label>
+						</div>
+						<div class="input-box3">
+							<input type="password" required>
+							<label>Пароль</label>
+						</div>
+						<div class="input-box4">
+							<input type="forgot-password-email" required>
+							<label>Повторите пароль</label>
+						</div>
+						<div class="login-register">
+							<a onclick="showBack('none')" class="login-link">Уже есть аккаунт?</a>
+						</div>
+						<button type="submit" class="btn">Продолжить</button>
+					</form>
+				</div>
+			</div>
+
+			<!-- Другой Блок Регистрации -->
+			<div class="content">
+
+			<section>
+					<div class="banner-warp">
+						<div class="container">
+							<div id="hero-banner" class="banner">
+								<span class="banner__text">EXPERT CARE</span>
+								<b class="banner__trend">OFF THE DIRT</b>
+								<span class="banner__text_ru">Доверьте свою обувь нам.</span>
+								<div class="banner-link-warp">
+									<a href="#" class="banner__link btn-primary"> Заказать </a>
+								</div>
+							</div>
+						</div>
+					</div>
+			</section>
+
+			<section>
+					<div class="container">
+						<div class="about-cleans_container">
+							<div class="about-cleans_block-img">
+								<img class="about-cleans_img " src="img/about-us/dominik-martin-b2-fBVrfx0o-unsplash 1.png" alt="bg-block">
+								<h2>КОМПЛЕКСНЫЙ <br> ПОДХОД</h2>
+								<p>ПОЗАБОТЬТЕСЬ О СЕБЕ</p>
+								<img class="arrow-icon" src=".//img/about-us/Arrow 1.png" alt="arrow">
+							</div>
+							<div class="about-cleans_block-text">
+								<h2 class="header-text_about-cleans">CLEANS</h2>
+								<p class="description-text_about-cleans">– это команда профессионалов, которая специализируется
+									на химчистке обуви. Мы понимаем, что обувь
+										– это не только элемент гардероба,
+									но и зеркало Вашей личной гигиены.</p>
+								<button class="btn_about-cleans">Смотреть услуги</button>
+							</div>
+						</div>
+						
+					</div>
+			</section>
+
+			<section>
+					<div class="container">
+						<div id="about-us-warp-href" class="about-us-warp">
+							<div class="about-us-warp-header title-section">
+										<h2>ПОЧЕМУ СТОИТ</h2>
+										<h2>ВЫБРАТЬ НАС?</h2>
+							</div>
+							<div class="about-us-warp-cards">
+								<div class="about-us-warp-card">
+									<div class="about-us-warp-card-header">
+										<div class="card-number">1</div>
+									</div>
+									<div class="about-us-warp-card-header-3">
+										<h3>Качество обслуживания</h3>
+									</div>
+									<p>Мы обеспечиваем высокое качество химчистки обуви,
+										которое невозможно достичь при использовании домашних средств</p>
+
+								</div>
+
+								<div class="about-us-warp-card">
+
+									<div class="about-us-warp-card-header">
+										<div class="card-number">2</div>
+									</div>
+
+									<div class="about-us-warp-card-header-4">
+										<h3>Мастерство</h3>
+									</div>
+
+									<p>Наша команда профессионалов обладает многолетним
+										опытом и знаниями в области химчистки обуви</p>
+
+								</div>
+
+								<div class="about-us-warp-card">
+
+									<div class="about-us-warp-card-header">
+										<div class="card-number">3</div>
+									</div>
+
+									<div class="about-us-warp-card-header-4">
+										<h3>Удобство</h3>
+									</div>
+
+									<p>Наш сервис предоставляет удобный способ оформления заказа
+										и очистки обуви, которые экономят время клиентов</p>
+
+								</div>
+
+								<div class="about-us-warp-card">
+
+									<div class="about-us-warp-card-header">
+										<div class="card-number">4</div>
+									</div>
+
+									<div class="about-us-warp-card-header-4">
+										<h3>Экологичность</h3>
+									</div>
+
+									<p>Наша химчистка использует только безопасные
+										и экологически чистые средства для химчистки обуви</p>
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+			</section>
+
+			<section>
+				<div class="container">
+					<div id="Serv" class="Services">
+						<div class="Services-header title-section">
+							<h2>НАШИ</h2>
+							<h2>УСЛУГИ</h2>
+						</div>
+						<nav class="Services-nav">
+								<ul class="Services-nav__items">
+									<li data-li="Кроссовки" class="Services-nav__item active"><a class="Services-nav__item-link active" href="#" onclick="return false">Кроссовки</a></li>
+									<li data-li="Классическая" class="Services-nav__item"><a class="Services-nav__item-link" href="#" onclick="return false">Классическая</a></li>
+									<li data-li="Премиальная" class="Services-nav__item"><a class="Services-nav__item-link" href="#" onclick="return false">Премиальная</a></li>
+									<li data-li="Сезонная" class="Services-nav__item"><a class="Services-nav__item-link" href="#" onclick="return false">Сезонная</a></li>
+									<li data-li="Дополнительно" class="Services-nav__item"><a class="Services-nav__item-link" href="#" onclick="return false">Дополнительно</a></li>
+								</ul>
+						</nav>	
+					</div>
+				<div class="Services-cards">
+					<div data-w-tab="Tab 1" class="item Кроссовки">
+						<div class="price-block-01">
+							<div class="price-block-01-left">
+								<div class="price-block-01-left-header">
+									<div class="card-header">
+										КЕДЫ И КРОССОВКИ
+									</div>
+								</div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												ЛЕГКИЕ
+											</span>
+										</p>
+										<p class="body-text-white">
+											Синтетика/Сетка/Резина
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">2000</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="price-block-01-left-line"></div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												СТАНДАРТНЫЕ
+											</span>
+										</p>
+										<p class="body-text-white">
+											Кожа/Замша/Нубук/Ткань/ Комбинированные материалы
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">2500</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="price-block-01-left-line"></div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												ГЛУБОКАЯ ОЧИСТКА
+											</span>
+										</p>
+										<p class="body-text-white">
+											Для кроссовок, которые нужно спасать
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">+500</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="price-block-01-right">
+								<img src="img/Services/Maxium_5 1.png" alt="кроссовок">
+								<div class="price-block-01-right-time">
+									<div class="price-block-01-right-time-1">
+									10
+									</div>
+									<div class="price-block-01-right-time-2">
+										<div class="body-text-white-2">
+											<span class="text-span-6">ДНЕЙ</span>
+										</div>
+										<div class="body-text-white">Срок выполнения работ</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-w-tab="Tab 2" class="item Классическая" style="display: none;">
+						<div class="price-block-02">
+							<div class="price-block-01-left">
+								<div class="price-block-01-left-header">
+									<div class="card-header">
+										КЛАССИЧЕСКАЯ ОБУВЬ
+									</div>
+								</div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												ЛЕГКИЕ
+											</span>
+										</p>
+										<p class="body-text-white">
+											Туфли, мокасины, лоферы
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">2500</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="price-block-01-left-line"></div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												СТАНДАРТНЫЕ
+											</span>
+										</p>
+										<p class="body-text-white">
+											Ботинки, полусапоги
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">3000</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="price-block-01-left-line"></div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												ПОЛНЫЙ УХОД
+											</span>
+										</p>
+										<p class="body-text-white">
+											Обувь на кожаной подошве
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">+1000</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="price-block-01-right">
+								<img src="img/Services/Maxium_5 2.png" alt="кроссовок">
+								<div class="price-block-01-right-time">
+									<div class="price-block-01-right-time-1">
+									10
+									</div>
+									<div class="price-block-01-right-time-2">
+										<div class="body-text-white-2">
+											<span class="text-span-6">ДНЕЙ</span>
+										</div>
+										<div class="body-text-white">Срок выполнения работ</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-w-tab="Tab 3" class="item Премиальная" style="display: none;">
+						<div class="price-block-03">
+							<div class="price-block-01-left">
+								<div class="price-block-01-left-header">
+									<div class="card-header">
+										ПРЕМИУМНАЯ ОБУВЬ
+									</div>
+								</div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												ДЕЛИКАТНАЯ ОЧИСТКА
+											</span>
+										</p>
+										<p class="body-text-white">
+											Для кроссовок и обуви из люкс-сегмента
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">4000</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="price-block-01-left-line"></div>
+								<div class="price-block-02-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												ВЛАГООТВОДЯЩАЯ ПРОПИТКА
+											</span>
+										</p>
+										<p class="body-text-white">
+											Обработаем верхнюю часть кроссовка для защиты от пыли, грязи и влаги
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">500</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="price-block-01-right">
+								<img src="img/Services/Maxium_5 3.png" alt="кроссовок">
+								<div class="price-block-01-right-time">
+									<div class="price-block-01-right-time-1">
+									7
+									</div>
+									<div class="price-block-01-right-time-2">
+										<div class="body-text-white-2">
+											<span class="text-span-6">ДНЕЙ</span>
+										</div>
+										<div class="body-text-white">Срок выполнения работ</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-w-tab="Tab 4" class="item Сезонная" style="display: none;">
+						<div class="price-block-04">
+							<div class="price-block-01-left">
+								<div class="price-block-01-left-header">
+									<div class="card-header">
+										ЗИМНЯЯ ОБУВЬ
+									</div>
+								</div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												НИЗКАЯ ОБУВЬ
+											</span>
+										</p>
+										<p class="body-text-white">
+											Зимняя или демисезонная обувь
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">3500</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="price-block-01-left-line"></div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												СРЕДНЯЯ
+											</span>
+										</p>
+										<p class="body-text-white">
+											Ботинки/полуботинки
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">4000</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="price-block-01-left-line"></div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												ВЫСОКАЯ
+											</span>
+										</p>
+										<p class="body-text-white">
+											Высокие ботинки/Сапоги/Ботфорты
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">5000</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="price-block-01-right">
+								<img src="img/Services/Maxium_5 4.png" alt="кроссовок">
+								<div class="price-block-01-right-time">
+									<div class="price-block-01-right-time-1">
+									10
+									</div>
+									<div class="price-block-01-right-time-2">
+										<div class="body-text-white-2">
+											<span class="text-span-6">ДНЕЙ</span>
+										</div>
+										<div class="body-text-white">Срок выполнения работ</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-w-tab="Tab 5" class="item Дополнительно" style="display: none;">
+						<div class="price-block-05">
+							<div class="price-block-01-left">
+								<div class="price-block-01-left-header">
+									<div class="card-header">
+										ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ
+									</div>
+								</div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												Дезодорант
+											</span>
+										</p>
+										<p class="body-text-white">
+											Обработаем внутреннюю часть кроссовка антибактериальным средством
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">400</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="price-block-01-left-line"></div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												Локальная реставрация и покраска потертостей и царапин
+											</span>
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">1500</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="price-block-01-left-line"></div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												Отбеливание подошвы
+											</span>
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">1000</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="price-block-01-right">
+								<img src="img/Services/Maxium_5 5.png" alt="кроссовок">
+								<div class="price-block-01-right-time">
+									<div class="price-block-01-right-time-1">
+									10
+									</div>
+									<div class="price-block-01-right-time-2">
+										<div class="body-text-white-2">
+											<span class="text-span-6">ДНЕЙ</span>
+										</div>
+										<div class="body-text-white">Срок выполнения работ</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+			</section>
+
+			</div>
+		</div>
+
+	</main>
+</body>
