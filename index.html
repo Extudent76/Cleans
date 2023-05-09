@@ -11,7 +11,7 @@
 	<script src="/libs/ScrollTrigger.min.js" defer></script>
 	<script src="js/login_animation.js" defer></script>
 	<script src="js/scriptsServices.js" defer></script>
-	<script src="/js/app.js" defer></script>
+	<script src="/xyi/js/app.js" defer></script>
 	<script src="js/scriptsLogin.js" defer></script>
 	<script src="js/scriptsChangeLogReg.js" defer></script>
 	<link rel="stylesheet" href="css/style.css">
@@ -46,7 +46,7 @@
 								<a class="header-nav__item-link" href="#Serv">УСЛУГИ</a>
 							</li>
 							<li class="header-nav__item">
-								<a class="header-nav__item-link" href="#">ОТЗЫВЫ</a>
+								<a class="header-nav__item-link" href="#review">ОТЗЫВЫ</a>
 							</li>
 							<li class="header-nav__item">
 								<a class="header-nav__item-link" href="#">ЗАКАЗАТЬ</a>
@@ -707,7 +707,7 @@
 			</section>
 			<section>
 				<div class="container">
-					<div class="review-section">
+					<div class="review-section" id="review">
 						<div class="review-header title-section">
 							<h2>ВАШИ</h2>
 							<h2>ОТЗЫВЫ</h2>
@@ -793,9 +793,10 @@
 						</div>
 						<div class="review-block-write">
 							<div class="review-block-write-header">
-								<h2>ОСТАВИТЬ</h2>
+								<h2 class="review-block-write-header_h2">ОСТАВИТЬ</h2>
 								<h2>СВОЙ</h2>
 							</div>
+							<div class="user-block-rating_write_stat">
 							<div class="user-block-rating-stat">
 								<img class="stars" src="img/review/starCOLORED.png" alt="Звезда">
 								<img class="stars"src="img/review/starCOLORED.png" alt="Звезда">
@@ -803,13 +804,17 @@
 								<img class="stars"src="img/review/starCOLORED.png" alt="Звезда">
 								<img class="stars"src="img/review/starShapeColored.png" alt="Звезда">
 							</div>
+							<div class="user-block-rating_write">
 							<div class="user-block-rating-prof">
 								<img class="prof-pic" src="img/review/userPhoto.png" alt="Картинка Профиля">
 							</div>
 							<div class="review-write-input">
 								<input type="text">
 							</div>
+							</div>
+							</div>
 						</div>
+						<button class="btn_review-section">Отправить</button>
 					</div>
 				</div>
 			</section>

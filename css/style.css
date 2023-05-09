@@ -1097,23 +1097,21 @@ line-height: 48px;
 	font-size: 30px;
 	margin: 3em 0 0 0;
 	padding: 0 0 0 2em;
-	gap: 1em;
+	gap: 1.85em;
 }
 
 .user-block-rating-prof{
 	display: flex;
-	flex-direction: column;
+	margin-right: 0.5em;
 	width: 70px;
 	height: 70px;
 	order: 0;
-	align-self: center;
 }
 
 .user-block-rating-stat{
 	display: flex;
 	flex-direction: row;
-	align-self: self-start;
-	height: 10%;
+	margin-bottom: 0.5em;
 	gap: 0.4em;
 	order: 1;
 }
@@ -1133,12 +1131,31 @@ line-height: 48px;
 	border: 1px solid #2F2F2F;
 	border-radius: 8px;
 	padding: 10px 5px 110px 10px;
+	margin-bottom: 1.5em;
 }
 
 .review-block-write-header{
+	font: 500 30px/43px 'Montserrat', sans-serif;
 	display: flex;
+	position: relative;
 	flex-direction: column;
-	justify-content: space-evenly;
 	align-items: flex-end;
+	gap: -1em;
+	top:auto;
 }
-
+.review-block-write-header_h2{
+margin-bottom: 21px;
+}
+.btn_review-section{
+	margin-right: 50px;
+	float: right;
+	font: 500 18px/22px 'Montserrat', sans-serif;
+	color: #CA6D20;
+	height: 45px;
+	width: 217px;
+	border-radius: 8px;
+	border:2px solid #FD7E14;
+}
+.user-block-rating_write{
+	display: flex;
+}
