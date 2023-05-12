@@ -320,6 +320,7 @@ path {transition: fill .4s ease;}
 	left: 95%;
 	top: 1%;
 	z-index: 16000;
+	color: none;
 }
 
 .back{
@@ -1014,4 +1015,171 @@ line-height: 48px;
 	flex-direction: row;
 	grid-column-gap: 6.5em;
 	background-color: #698498;
+}
+
+/*Review*/
+
+.review-box-cards{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-top: 4em;
+}
+
+.arrow-icon-review{
+	display: flex;
+	align-self: center;
+}
+
+.review-block-card{
+	font-family: Montserrat;
+	font-size: 14px;
+	display: flex;
+	flex-direction: column;
+	padding: 35px 40px;
+	gap: 20px;
+	color: #fff;
+	line-height: 17px;
+	width: 320px;
+
+	background: #2F2F2F;
+	border-radius: 24px 24px 24px 0px;
+
+	/* Inside auto layout */
+
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+
+.rate-sec{
+	display: flex;
+	align-self: flex-start;
+	justify-content: space-around;
+}
+
+.star{
+	display: flex;
+	margin: 0 1em 0 0;
+}
+
+.review-block-card-under{
+	width: 55px;
+	height: 40px;
+	border-bottom-left-radius: 8px;
+	background: linear-gradient(to right bottom, #2F2F2F 50%, transparent calc(50% + 1px)) no-repeat 0px 0px / 55px 40px;
+}
+
+.user-block-card{
+	display: flex;
+	flex-wrap: wrap;
+	font-family: Montserrat;
+	font-size: 14px;
+}
+
+.user-name-info{
+	display: flex;
+	color: #000000;
+	font-weight: 600;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 0 0 1.5em;
+}
+
+.user-time-review-past{
+	display: flex;
+	font-weight: 500;
+	margin: 0.3em 0 0 0;
+}
+
+.review-block-write{
+	display: flex;
+	font-size: 30px;
+	margin: 3em 0 0 0;
+	padding: 0 0 0 2em;
+	gap: 1.85em;
+}
+
+.user-block-rating-prof{
+	display: flex;
+	margin-right: 0.5em;
+	width: 70px;
+	height: 70px;
+	order: 0;
+}
+
+.user-block-rating-stat{
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 0.5em;
+	gap: 0.4em;
+	order: 1;
+}
+
+.review-write-input{
+	display: flex;
+	order: 2;
+}
+
+.review-write-input input{
+	display: flex;
+	font-family: Montserrat;
+	box-sizing: border-box;
+	word-wrap:break-word;
+	width: 647px;
+	height: 140px;
+	border: 1px solid #2F2F2F;
+	border-radius: 8px;
+	padding: 10px 5px 110px 10px;
+	margin-bottom: 1.5em;
+}
+
+.review-block-write-header{
+	font: 500 30px/43px 'Montserrat', sans-serif;
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: -1em;
+	top:auto;
+}
+.review-block-write-header_h2{
+margin-bottom: 21px;
+}
+.btn_review-section{
+	margin-right: 50px;
+	float: right;
+	font: 500 18px/22px 'Montserrat', sans-serif;
+	color: #CA6D20;
+	height: 45px;
+	width: 217px;
+	border-radius: 8px;
+	border:2px solid #FD7E14;
+}
+.user-block-rating_write{
+	display: flex;
+}
+
+/* telegram-banner */
+.telegram-banner{
+	display: flex;
+	margin-top: 9.3em;
+	height: 20em;
+	width: 100%;
+	background-color: #3E4044;
+	justify-content: center;
+}
+.telegram-banner_text-title{
+	margin-top: 2.25em;
+	font: 700 40px/49px 'Montserrat', sans-serif;
+	color: #fff;
+}
+.telegram-banner_text-subtitle{
+	margin-top: 1.13em;
+	font: 500 30px/36px 'Montserrat', sans-serif;
+	color: #7C7C7C;
+}
+.telegram-banner-image{
+	margin-left: 9.3em;
+	margin-top: 7em;
 }
