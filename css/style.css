@@ -99,6 +99,45 @@ grid-column-gap: 4.3em;
 	color: #EE8100;
 }
 
+.header-telegram {
+	position: absolute;
+	right: 22.5em;
+	width: 30px;
+	height: 35px;
+	top: calc(50% - 35px/2 + 0.5px);
+}
+
+.header-telegram__icon .telegram-content{
+	position: absolute;
+	text-align: center;
+	width: 60px;
+	top: -0.7rem;
+	right: -4rem;
+}
+
+.header-telegram__icon{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: calc(50% - 30px/2 - 0.5px);
+	transition-property: all;
+	transition: all ease 0.5s;
+}
+
+.header-telegram__icon:hover{
+	transform: translateX(-50px);
+}
+
+.telegram-content{
+	opacity: 0;
+	transition: 1s;
+}
+
+.header-telegram__icon:hover .telegram-content{
+	visibility: visible;
+	opacity: 1;
+}
+
 .header-user {
   display: flex;
   align-items: center;
@@ -364,7 +403,7 @@ path {transition: fill .4s ease;}
 	border: none;
 	outline: none;
 	display: flex;
-	border: 1px solid #01C699;
+	border: 1px solid #FD7E14;
 	border-radius: 8px;
 }
 .input-box4 input{
@@ -378,7 +417,7 @@ path {transition: fill .4s ease;}
 	border: none;
 	outline: none;
 	display: flex;
-	border: 1px solid #01C699;
+	border: 1px solid #FD7E14;
 	border-radius: 8px;
 }
 
@@ -513,7 +552,7 @@ path {transition: fill .4s ease;}
 	border: none;
 	outline: none;
 	display: flex;
-	border: 1px solid #01C699;
+	border: 1px solid #FD7E14;
 	border-radius: 8px;
 }
 
@@ -527,7 +566,7 @@ path {transition: fill .4s ease;}
 	border: none;
 	outline: none;
 	display: flex;
-	border: 1px solid #01C699;
+	border: 1px solid #FD7E14;
 	border-radius: 8px;
 }
 
@@ -649,9 +688,9 @@ path {transition: fill .4s ease;}
 .btn_about-cleans{
 	font: 500 18px/22px 'Montserrat', sans-serif;
 	color: #CA6D20;
-	height: 45px;
-	width: 217px;
-	border-radius: 22px;
+	height: 50px;
+	width: 180px;
+	border-radius: 8px;
 	border:2px solid #FD7E14;
 }
 .btn_about-cleans:hover{
@@ -889,7 +928,7 @@ line-height: 48px;
 	position: relative;
 	display: flex;
 	height: 36em;
-	margin-bottom: 4em;
+	margin-bottom: 2em;
 	padding: 4.5em 4.67em 5.33em 4.67em;
 	flex-direction: row;
 	grid-column-gap: 6.5em;
@@ -1015,6 +1054,26 @@ line-height: 48px;
 	flex-direction: row;
 	grid-column-gap: 6.5em;
 	background-color: #698498;
+}
+
+.Services-btn{
+	height: 7em;
+	top: 2em;
+}
+
+.btn-services{
+	float: right;
+	font: 500 18px/22px 'Montserrat', sans-serif;
+	color: #53A835;
+	height: 50px;
+	width: 180px;
+	border-radius: 8px;
+	border:2px solid #53A835;
+}
+
+.btn-services:hover{
+	color: #fff;
+	background-color: #53A835;
 }
 
 /*Review*/
@@ -1158,4 +1217,28 @@ margin-bottom: 21px;
 }
 .user-block-rating_write{
 	display: flex;
+}
+
+/* telegram-banner */
+.telegram-banner{
+	display: flex;
+	margin-top: 9.3em;
+	height: 20em;
+	width: 100%;
+	background-color: #3E4044;
+	justify-content: center;
+}
+.telegram-banner_text-title{
+	margin-top: 2.25em;
+	font: 700 40px/49px 'Montserrat', sans-serif;
+	color: #fff;
+}
+.telegram-banner_text-subtitle{
+	margin-top: 1.13em;
+	font: 500 30px/36px 'Montserrat', sans-serif;
+	color: #7C7C7C;
+}
+.telegram-banner-image{
+	margin-left: 9.3em;
+	margin-top: 7em;
 }
