@@ -662,7 +662,7 @@ path {transition: fill .4s ease;}
 .gallery{
 	margin-bottom: 6em;
 }
-.gallery-top{
+.gallery_top{
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
