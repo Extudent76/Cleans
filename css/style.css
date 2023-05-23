@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 *{
 	margin: 0;
 	padding: 0;
@@ -1083,12 +1084,38 @@ line-height: 48px;
 	justify-content: space-between;
 	align-items: flex-end;
 	margin-top: 4em;
+	gap: 20px;
 }
 
 .arrow-icon-review{
 	display: flex;
 	align-self: center;
 }
+
+.btn-Arrow-Slider-Left,
+.btn-Arrow-Slider-Right {
+	display: flex;
+	position: absolute;
+	width: 14vw;
+	height: 50%;
+	align-items: center;
+	border: none;
+	background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+	z-index: 10;
+	justify-content: center;
+	
+}
+
+.btn-Arrow-Slider-Right{
+	right: 0;
+}
+
+.btn-Arrow-Slider-Left{
+	left: 0;
+}
+
+
+
 
 .review-block-card{
 	font-family: Montserrat;
@@ -1169,18 +1196,21 @@ line-height: 48px;
 
 .user-block-rating-stat{
 	display: flex;
-	flex-direction: row;
+	flex-direction: row-reverse;
+	justify-items: left;
+	max-width: min-content;
 	margin-bottom: 0.5em;
 	gap: 0.4em;
 	order: 1;
 }
+
 
 .review-write-input{
 	display: flex;
 	order: 2;
 }
 
-.review-write-input input{
+.review-write-input textarea{
 	display: flex;
 	font-family: Montserrat;
 	box-sizing: border-box;
@@ -1192,6 +1222,11 @@ line-height: 48px;
 	padding: 10px 5px 110px 10px;
 	margin-bottom: 1.5em;
 }
+
+textarea{
+	resize: none;
+}
+
 
 .review-block-write-header{
 	font: 500 30px/43px 'Montserrat', sans-serif;
@@ -1215,9 +1250,36 @@ margin-bottom: 21px;
 	border-radius: 8px;
 	border:2px solid #FD7E14;
 }
+
+.btn_review-section:hover{
+	color: #fff;
+	background-color: #FD7E14;
+}
+
 .user-block-rating_write{
 	display: flex;
 }
+
+.user-block-rating_write_stat .user-block-rating-stat input{
+	display: none;
+}
+
+.user-block-rating-stat label{
+	font-size: 23px;
+	color: #2F2F2F;
+	transition: all 0.2s ease;
+	cursor: pointer;
+}
+
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+	color: #FD7E14;
+}
+input:checked ~ label{
+	color: #FD7E14;
+}
+
+
 
 /* telegram-banner */
 .telegram-banner{

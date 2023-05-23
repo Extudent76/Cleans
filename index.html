@@ -14,18 +14,19 @@
 	<script src="js/app.js" defer></script>
 	<script src="js/scriptsLogin.js" defer></script>
 	<script src="js/scriptsChangeLogReg.js" defer></script>
+	<script src="js/SlideAnimation.js" defer></script>
 	<link rel="stylesheet" href="css/style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800;900&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800;900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -729,14 +730,23 @@
 			
 			<section>
 				<div class="container">
+					<div class="review-header title-section">
+						<h2>ВАШИ</h2>
+						<h2>ОТЗЫВЫ</h2>
+					</div>
 					<div class="review-section" id="review">
-						<div class="review-header title-section">
-							<h2>ВАШИ</h2>
-							<h2>ОТЗЫВЫ</h2>
-						</div>
+						<button class="btn-Arrow-Slider-Left">
+							<svg width="17" height="30" viewBox="0 0 17 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0.585786 13.5858C-0.195262 14.3668 -0.195262 15.6332 0.585786 16.4142L13.3137 29.1421C14.0948 29.9232 15.3611 29.9232 16.1421 29.1421C16.9232 28.3611 16.9232 27.0948 16.1421 26.3137L4.82843 15L16.1421 3.68629C16.9232 2.90524 16.9232 1.63891 16.1421 0.857864C15.3611 0.0768156 14.0948 0.0768156 13.3137 0.857864L0.585786 13.5858ZM2 17H3V13H2V17Z" fill="#2F2F2F"/>
+								</svg>									
+						</button>
+						<button class="btn-Arrow-Slider-Right">
+							<svg width="17" height="30" viewBox="0 0 17 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M16.4142 16.4142C17.1953 15.6332 17.1953 14.3668 16.4142 13.5858L3.68629 0.857864C2.90524 0.0768156 1.63891 0.0768156 0.857864 0.857864C0.0768156 1.63891 0.0768156 2.90524 0.857864 3.68629L12.1716 15L0.857864 26.3137C0.0768156 27.0948 0.0768156 28.3611 0.857864 29.1421C1.63891 29.9232 2.90524 29.9232 3.68629 29.1421L16.4142 16.4142ZM14 17H15V13H14V17Z" fill="#2F2F2F"/>
+								</svg>									
+						</button>
 						<div class="review-box-cards">
-							<img class="arrow-icon-review" src="img/review/arrowrleft.png" alt="Стрелка">
-							<div class="review-block-left">
+							<div class="swiper-slide review-block-left">
 								<div class="review-block-card">
 									<div class="text-in-card">
 										<p>С другой стороны постоянный количественный рост и сфера нашей активности играет важную роль в 
@@ -762,7 +772,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="review-block-center">
+							<div class="swiper-slide review-block-center">
 								<div class="review-block-card">
 									<div class="text-in-card">
 										<p>С другой стороны постоянный количественный рост и сфера нашей активности играет важную роль в формировании
@@ -787,7 +797,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="review-block-right">
+							<div class="swiper-slide review-block-right">
 								<div class="review-block-card">
 									<div class="text-in-card">
 										<p>Это кринж бро</p>
@@ -811,7 +821,156 @@
 									</div>
 								</div>
 							</div>
-							<img class="arrow-icon-review" src="img/review/arrowright.png" alt="Стрелка">
+							<div class="swiper-slide review-block-left">
+								<div class="review-block-card">
+									<div class="text-in-card">
+										<p>С другой стороны постоянный количественный рост и сфера нашей активности играет важную роль в 
+											формировании соответствующий условий активизации. Идейные соображения высшего порядка, а также рамки 
+											и место обучения кадров требуют определения и уточнения форм развития. </p>
+									</div>
+									<div class="rate-sec">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+									</div>
+								</div>
+								<div class="review-block-card-under"></div>
+								<div class="user-block-card">
+									<img src="img/review/userPhoto.png" alt="Картинка Профиля">
+									<div class="user-name-info">
+										<p>Имя Фамилов</p>
+										<div class="user-time-review-past">
+											<p>10 дней назад</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide review-block-center">
+								<div class="review-block-card">
+									<div class="text-in-card">
+										<p>С другой стороны постоянный количественный рост и сфера нашей активности играет важную роль в формировании
+											соответствующий условий активизации. </p>
+									</div>
+									<div class="rate-sec">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+									</div>
+								</div>
+								<div class="review-block-card-under"></div>
+								<div class="user-block-card">
+									<img src="img/review/userPhoto.png" alt="Картинка Профиля">
+									<div class="user-name-info">
+										<p>Имя Фамилов</p>
+										<div class="user-time-review-past">
+											<p>10 дней назад</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide review-block-right">
+								<div class="review-block-card">
+									<div class="text-in-card">
+										<p>Это кринж бро</p>
+									</div>
+									<div class="rate-sec">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/star.png" alt="Звезда">
+									</div>
+								</div>
+								<div class="review-block-card-under"></div>
+								<div class="user-block-card">
+									<img src="img/review/userPhoto.png" alt="Картинка Профиля">
+									<div class="user-name-info">
+										<p>Имя Фамилов</p>
+										<div class="user-time-review-past">
+											<p>10 дней назад</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide review-block-left">
+								<div class="review-block-card">
+									<div class="text-in-card">
+										<p>С другой стороны постоянный количественный рост и сфера нашей активности играет важную роль в 
+											формировании соответствующий условий активизации. Идейные соображения высшего порядка, а также рамки 
+											и место обучения кадров требуют определения и уточнения форм развития. </p>
+									</div>
+									<div class="rate-sec">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+									</div>
+								</div>
+								<div class="review-block-card-under"></div>
+								<div class="user-block-card">
+									<img src="img/review/userPhoto.png" alt="Картинка Профиля">
+									<div class="user-name-info">
+										<p>Имя Фамилов</p>
+										<div class="user-time-review-past">
+											<p>10 дней назад</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide review-block-center">
+								<div class="review-block-card">
+									<div class="text-in-card">
+										<p>С другой стороны постоянный количественный рост и сфера нашей активности играет важную роль в формировании
+											соответствующий условий активизации. </p>
+									</div>
+									<div class="rate-sec">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+									</div>
+								</div>
+								<div class="review-block-card-under"></div>
+								<div class="user-block-card">
+									<img src="img/review/userPhoto.png" alt="Картинка Профиля">
+									<div class="user-name-info">
+										<p>Имя Фамилов</p>
+										<div class="user-time-review-past">
+											<p>10 дней назад</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide review-block-right">
+								<div class="review-block-card">
+									<div class="text-in-card">
+										<p>Это кринж бро</p>
+									</div>
+									<div class="rate-sec">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/star.png" alt="Звезда">
+									</div>
+								</div>
+								<div class="review-block-card-under"></div>
+								<div class="user-block-card">
+									<img src="img/review/userPhoto.png" alt="Картинка Профиля">
+									<div class="user-name-info">
+										<p>Имя Фамилов</p>
+										<div class="user-time-review-past">
+											<p>10 дней назад</p>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="review-block-write">
 							<div class="review-block-write-header">
@@ -820,18 +979,23 @@
 							</div>
 							<div class="user-block-rating_write_stat">
 							<div class="user-block-rating-stat">
-								<img class="stars" src="img/review/starCOLORED.png" alt="Звезда">
-								<img class="stars"src="img/review/starCOLORED.png" alt="Звезда">
-								<img class="stars"src="img/review/starCOLORED.png" alt="Звезда">
-								<img class="stars"src="img/review/starCOLORED.png" alt="Звезда">
-								<img class="stars"src="img/review/starShapeColored.png" alt="Звезда">
+								<input type="radio" name="rate" id="rate-5">
+								<label for="rate-5" class="fas fa-star"></label>
+								<input type="radio" name="rate" id="rate-4">
+								<label for="rate-4" class="fas fa-star"></label>
+								<input type="radio" name="rate" id="rate-3">
+								<label for="rate-3" class="fas fa-star"></label>
+								<input type="radio" name="rate" id="rate-2">
+								<label for="rate-2" class="fas fa-star"></label>
+								<input type="radio" name="rate" id="rate-1">
+								<label for="rate-1" class="fas fa-star"></label>
 							</div>
 							<div class="user-block-rating_write">
 							<div class="user-block-rating-prof">
 								<img class="prof-pic" src="img/review/userPhoto.png" alt="Картинка Профиля">
 							</div>
 							<div class="review-write-input">
-								<input type="text">
+								<textarea cols="30"></textarea>
 							</div>
 							</div>
 							</div>
