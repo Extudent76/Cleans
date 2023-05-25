@@ -1303,3 +1303,31 @@ input:checked ~ label{
 	margin-left: 9.3em;
 	margin-top: 7em;
 }
+
+/* FOOTER */
+.footer{
+	background-color: #000;
+		display: flex;
+		height: 13.3em;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+	.footer-right{
+		font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 24px;
+	}
+	.logo{
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 800;
+	font-size: 50px;
+	line-height: 61px;
+	margin-right: 714px;
+	}
+	.text{
+		color: #FFFFFF;
+	}
