@@ -1,0 +1,612 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+body {
+	color: #22262A;
+	font: 400 15px/22px 'Popins', 'Arial', 'Helvetica', sans-serif;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+	position: relative;
+	transform: .4s;
+}
+img {
+  all: unset;
+}
+ul li {
+	list-style-type: none;
+	margin-bottom: 0px;
+}
+button{
+	display: block;
+	font: inherit;
+	background-color: transparent;
+	cursor: pointer;
+	transition: .4s;
+}
+
+.container{
+	max-width: 1440px;
+	height: 100%;
+	padding: 0px 135px;
+	margin: 0px auto;
+}
+
+/* HEADER*/
+.header-menu{
+	position: fixed;
+	display: block;
+	width: 100%;
+	background-color: #fff;
+	z-index: 999;
+}
+.header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #fff;
+flex-direction: row;
+padding-left: 9em;
+padding-right: 9em;
+grid-column-gap: 4.3em;
+
+}
+.container_menu{
+	max-width: 1440px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.header-nav__item{
+	font: 400 18px/22px 'Montserrat', sans-serif;
+	display: inline-block;
+	margin-right: 31px;
+}
+.header-nav__item:last-child{
+	margin-right: 0;
+}
+.header-nav__item-link::before{
+  content: '';
+  bottom: -18px;
+  right: 0;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #EE8100;
+  transition: 0.2s;
+	transform: scaleX(0);
+}
+.header-nav__item-link:hover:before {
+  transform: scaleX(1);
+}
+.header-nav__item-link:hover{
+	color: #EE8100;
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-user__item span{
+	font-family: 'Montserrat';
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 22px;
+}
+
+.header-user__item svg{
+	margin-right: 10px;
+}
+
+path {transition: fill .4s ease;}
+
+.header-user__icon path{
+	fill: #22262A;
+}
+	
+.header-user__icon:hover path {
+	fill: #F98500;
+}
+
+.header-user__icon{
+	left: -40px;
+	bottom: 25px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.regButton{
+	height: 25px;
+	border: none;
+	font-family: 'Montserrat';
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 22px;
+	
+}
+
+.regButton:hover {
+	color: #EE8100;
+	transition: cubic-bezier(5,.7,3,1);
+	transition-delay: 0s;
+}
+
+
+#LOGIN-BLOCK{
+	font-family: Montserrat;
+	position: absolute;
+	width: 700px;
+	height: 600px;
+	margin: 100px auto;
+	background-color: transparent;
+	border-radius: 20px;
+	z-index: 16000;
+	position: fixed;
+	display: none;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}	
+
+#gray{
+	background-color: rgba(28,29,33, 0.87);
+	position: fixed;
+	display: none;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 15000;
+}
+
+.form-box h2{
+	position: relative;
+	text-align: center;
+	font-size: 69px;
+	color: #fff;
+	width: 100%;
+	padding: 100px;
+	margin: 0px 130px 0px 0px;
+}
+
+.form-box{
+	text-align: center;
+	position: relative;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+
+.forgot-password-email{
+	font-family: Montserrat;
+	font-size: 18px;
+	color: #999999;
+	justify-content: center;
+	position: absolute;
+	left: 50%;
+	margin-right: -50%;
+	bottom: -2%;
+	transform: translate(-50%, -50%);
+}
+
+.login-register{
+	font-family: Montserrat;
+	font-size: 18px;
+	color: #999999;
+	position: absolute;
+	left: 50%;
+	margin-right: -50%;
+	bottom: -12%;
+	transform: translate(-50%, -50%);
+}
+
+.btn{
+	background-color: #EE8100;
+	border-radius: 8px;
+	border: none;
+	font-weight: 700;
+	font-family: Montserrat;
+	font-size: 14px;
+	color: #fff;
+	padding: 16px 65px 16px 65px;
+	position: relative;
+	bottom: -140px;
+	left: 257px;
+}
+
+.close{
+	cursor: pointer;
+	width: 18px;
+	height: 18px;
+	position: relative;
+	left: 95%;
+	top: 1%;
+	z-index: 16000;
+	color: none;
+}
+
+.back{
+	cursor: pointer;
+	z-index: 16000;
+}
+
+#REGISTER-BLOCK{
+	font-family: Montserrat;
+	position: absolute;
+	width: 700px;
+	height: 600px;
+	margin: 100px auto;
+	background-color: transparent;
+	border-radius: 20px;
+	z-index: 16000;
+	position: fixed;
+	display: none;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.login-link{
+	cursor: pointer;
+}
+
+.register-link{
+	cursor: pointer;
+}
+
+.input-box3 input{
+
+	position: absolute;
+	margin-left: 40px;
+	padding-left: 20px;
+	font-size: 18px;
+	width: 326px;
+	height: 56px;
+	border: none;
+	outline: none;
+	display: flex;
+	border: 1px solid #01C699;
+	border-radius: 8px;
+}
+.input-box4 input{
+
+	position: absolute;
+	margin-left: 40px;
+	padding-left: 20px;
+	font-size: 18px;
+	width: 326px;
+	height: 56px;
+	border: none;
+	outline: none;
+	display: flex;
+	border: 1px solid #01C699;
+	border-radius: 8px;
+}
+
+#REGISTER-BLOCK .input-box1{
+	box-sizing: border-box;
+	padding: 5px 0px 0px -40px;
+	right: 200px;
+	color: #fff;
+	justify-content: center;
+	align-content: center;
+	font-size: 16px;
+	font-style: normal;
+	line-height: 22px;
+	font-weight: 700;
+	position: relative;
+	width: 60%;
+	height: 50px;
+	margin: 3px 0px 0px 70px;
+}
+
+#REGISTER-BLOCK .input-box2{
+	box-sizing: border-box;
+	padding: 5px 0px 0px -40px;
+	left: 145px;
+	bottom: 108px;
+	color: #fff;
+	justify-content: center;
+	align-content: center;
+	font-size: 16px;
+	font-style: normal;
+	line-height: 22px;
+	font-weight: 700;
+	position: relative;
+	width: 60%;
+	height: 50px;
+	margin: 3px 0px 0px 70px;
+
+}
+#REGISTER-BLOCK .input-box3{
+	box-sizing: border-box;
+	padding: 5px 0px 0px -40px;
+	right: 130px;
+	bottom: 40px;
+	color: #fff;
+	justify-content: center;
+	align-content: center;
+	font-size: 16px;
+	font-style: normal;
+	line-height: 22px;
+	font-weight: 700;
+	position: relative;
+	width: 60%;
+	height: 50px;
+	margin: 3px 0px 0px 70px;
+
+}
+#REGISTER-BLOCK .input-box4{
+	box-sizing: border-box;
+	padding: 5px 0px 0px -40px;
+	left: 215px;
+	bottom: 93px;
+	color: #fff;
+	justify-content: center;
+	align-content: center;
+	font-size: 16px;
+	font-style: normal;
+	line-height: 22px;
+	font-weight: 700;
+	position: relative;
+	width: 60%;
+	height: 50px;
+	margin: 3px 0px 0px 70px;
+
+}
+
+.input-box3 label{
+	position: absolute;
+	padding-bottom: 15px;
+	margin-top: 7px;
+	left: 40px;
+	top: -50%;
+	transform: translateY(-50%);
+}
+
+.input-box4 label{
+	position: absolute;
+	left: 40px;
+	top: -50%;
+	transform: translateY(-50%);
+}
+
+#REGISTER-BLOCK .input-box1 label{
+	position: absolute;
+	margin-top: -5px;
+	left: 110px;
+	top: -12%;
+	transform: translateY(-50%);
+}
+
+#REGISTER-BLOCK .input-box2 label{
+	position: absolute;
+	margin-top: -5px;
+	left: 110px;
+	top: -25%;
+	transform: translateY(-50%);
+}
+
+.back{
+	position: absolute;
+	left: -110px;
+}
+
+#REGISTER-BLOCK .login-register{
+	position: absolute;
+	left: 47%;
+	top: 90%;
+}
+#REGISTER-BLOCK .btn{
+	font-family: Montserrat;
+	position: relative;
+	left: 30%;
+	top: 20px;
+}
+
+#REGISTER-BLOCK .input-box2 input{
+	position: relative;
+	margin-left: 40px;
+	padding-left: 20px;
+	font-size: 18px;
+	width: 326px;
+	height: 56px;
+	border: none;
+	outline: none;
+	display: flex;
+	border: 1px solid #01C699;
+	border-radius: 8px;
+}
+
+#REGISTER-BLOCK .input-box1 input{
+	position: relative;
+	margin-left: 40px;
+	padding-left: 20px;
+	font-size: 18px;
+	width: 326px;
+	height: 56px;
+	border: none;
+	outline: none;
+	display: flex;
+	border: 1px solid #01C699;
+	border-radius: 8px;
+}
+/*Form-block*/
+.form-block{
+	margin-top: 54px;
+	display: flex;
+}
+
+.form-block:last-child{
+	margin-top: 90px;
+	display: flex;
+}
+
+.main-title{
+	padding-top: 144px;
+	font-family: 'Golos Text';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 80px;
+	line-height: 96px;
+}
+.section-title{
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 45px;
+	line-height: 55px;
+}
+.form-block-title{
+	margin-bottom: 3.33331em;
+	margin-right: auto;
+}
+
+.form-container_1:first-child{
+	margin-right: 48.68px;
+}
+
+.form-container {
+  display: flex;
+	margin-left: 87.7px;
+}
+
+.input-form {
+	margin-top: 53px;
+}
+.input-form:nth-child(1) {
+	margin-top: 0px;
+}
+.input-form:nth-child(2) {
+  margin-right: 0px; /* добавляем небольшой отступ между формами */
+	margin-top: 53px;
+}
+
+
+
+input{
+	width: 360.66px;
+	height: 56px;
+	font-size: 18px;
+	border: 1px solid #FD7E14;
+	border-radius: 8px;
+}
+
+.label-form {
+  display: block; /* располагаем метку на новой строке */
+  margin-bottom: 18px; /* добавляем небольшой отступ снизу метки */
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.save_button{
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 22px;
+	color: #FFFFFF;
+	margin-top: 54px;
+	width: 250px;
+	height: 56px;
+	display: block;
+	margin-left: auto;
+	background: #FD7E14;
+	border: 2.5px solid #FD7E14;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 8px;
+}
+
+.row {
+  display: flex;
+}
+
+input[type="radio"] {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	width: 12px;
+	height: 12px;
+}
+.input-Order{
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 17px;
+	line-height: 21px;
+	color: #2F2F2F
+}
+.column-title{
+	font-family: 'Montserrat';
+font-weight: 600;
+font-size: 25px;
+line-height: 30px;
+color: #2F2F2F;
+margin-bottom: 15px;
+}
+.column-input-radio-1{
+	width:271px;
+	margin-left: 87.7px;
+}
+.column-input-radio-1:last-child{
+	width:271px;
+	margin-left: 87.7px;
+	margin-top: 40px;
+}
+.column-input-radio-2{
+	margin-right: 91px;
+}
+.column-input-radio-3{
+	width:242px;
+}
+.column-input-radio-3:last-child{
+	width:242px;
+	margin-top: 40px;
+}
+.amount{
+	width: 250px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 18px;
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.save_button_3{
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 22px;
+	color: #FFFFFF;
+	width: 250px;
+	height: 56px;
+	display: block;
+	margin-left: auto;
+	background: #FD7E14;
+	border: 2.5px solid #FD7E14;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 8px;
+}
+
+.save_btn_3{
+	margin-top: 54px;
+}

@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cleans</title>
+	<link rel="icon" href="favicon.ico">
+	<script src="libs/gsap.min.js" defer></script>
+	<script src="libs/ScrollSmoother.min.js" defer></script>
+	<script src="libs/ScrollTrigger.min.js" defer></script>
+	<script src="js/login_animation.js" defer></script>
+	<script src="js/scriptsServices.js" defer></script>
+	<script src="js/app.js" defer></script>
+	<script src="js/scriptsLogin.js" defer></script>
+	<script src="js/scriptsChangeLogReg.js" defer></script>
+	<script src="js/SlideAnimation.js" defer></script>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800;900&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	<header id="hero-banner-href" class="header-menu">
+		<div class="container_menu">
+				<div class="header-price-wrapper">
+					<div class="header">
+				<a href="#hero-banner"><img class="header__title" src="img/header-menu/LOGO CLEANS.png" alt=""></a>
+				<nav class="header-nav">
+					<ul>
+							<li class="header-nav__item">
+									<a class="header-nav__item-link" href="#hero-banner">ГЛАВНАЯ</a>
+							</li>
+							<li class="header-nav__item">
+								<a class="header-nav__item-link" href="#about-us-warp-href">О НАС</a>
+							</li>
+							<li class="header-nav__item">
+								<a class="header-nav__item-link" href="#Serv">УСЛУГИ</a>
+							</li>
+							<li class="header-nav__item">
+								<a class="header-nav__item-link" href="#review">ОТЗЫВЫ</a>
+							</li>
+							<li class="header-nav__item">
+								<a class="header-nav__item-link" href="#">ЗАКАЗАТЬ</a>
+							</li>
+					</ul>
+				</nav>
+				<div class="tg-and-user-block">
+					<div class="header-telegram">
+						<div class="header-telegram__item">
+							<div class="header-telegram__icon">
+								<a href="http://t.me/botic_cleans_bot" target="_blank" >
+									<div class="telegram-content">
+										TG БОТ
+									</div>
+									<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<circle cx="15" cy="15" r="13.5" stroke="#2F2F2F" stroke-width="3"/>
+										<path d="M6.23741 14.4575C11.0692 12.3406 14.2912 10.9451 15.9033 10.2708C20.5063 8.34569 21.4627 8.01127 22.0861 8.00011C22.2232 7.9978 22.5298 8.03196 22.7284 8.194C22.8961 8.33081 22.9422 8.51563 22.9643 8.64535C22.9864 8.77506 23.0139 9.07056 22.992 9.30145C22.7426 11.9368 21.6633 18.3322 21.1142 21.2839C20.8818 22.5328 20.4244 22.9516 19.9815 22.9926C19.0189 23.0816 18.288 22.3529 17.3558 21.7385C15.897 20.7769 15.0729 20.1783 13.6569 19.24C12.0205 18.1557 13.0813 17.5597 14.0139 16.5857C14.258 16.3308 18.4988 12.452 18.5809 12.1001C18.5912 12.0561 18.6007 11.892 18.5038 11.8054C18.4069 11.7188 18.2639 11.7484 18.1606 11.772C18.0143 11.8054 15.6839 13.3542 11.1694 16.4186C10.5079 16.8753 9.90875 17.0979 9.37193 17.0862C8.78013 17.0734 7.64175 16.7497 6.79548 16.4731C5.75749 16.1338 4.93252 15.9545 5.00436 15.3783C5.04178 15.0781 5.45279 14.7712 6.23741 14.4575Z" fill="#2F2F2F"/>
+										</svg>								
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="header-user">
+							<div class="header-user__item">
+								<button onclick="show('block')" class="regButton">ВХОД
+									<a class="header-user__icon">
+										<svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M23.9669 22.9748C25.8537 20.8548 27 18.0613 27 15C27 8.37258 21.6274 3 15 3C8.37258 3 3 8.37258 3 15C3 18.0613 4.14629 20.8548 6.03307 22.9748C6.01117 22.8183 6 22.6599 6 22.5C6 19.4624 10.0294 17 15 17C19.9706 17 24 19.4624 24 22.5C24 22.6599 23.9888 22.8183 23.9669 22.9748ZM15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0C6.71573 0 0 6.71573 0 15C0 23.2843 6.71573 30 15 30ZM19 11C19 13.2091 17.2091 15 15 15C12.7909 15 11 13.2091 11 11C11 8.79086 12.7909 7 15 7C17.2091 7 19 8.79086 19 11Z" fill="#2F2F2F"/>
+											<circle cx="15" cy="15" r="11" stroke="white" stroke-width="2"/>
+										</svg>	
+								</button>
+								</a>
+							</div>
+					</div>
+				</div>
+					</div>
+				</div>
+		</div>
+	</header>
+
+	<main>
+
+		<div class="wrapper">
+			<!-- Другой Блок Регистрации -->
+			<section>
+			<div onclick="show('none')" id="gray"></div>
+			<div id="LOGIN-BLOCK">
+				<img onclick="show('none')" class="close" src="img/header-menu/closeIMG.png" alt="">
+				<div class="form-box">
+					<h2>Войти</h2>
+					<form action="#">
+						<div class="input-box1">
+							<input type="email" required>
+							<label>Почта</label>
+						</div>
+						<div class="input-box2">
+							<input type="password" required>
+							<label>Пароль</label>
+						</div>
+						<div class="forgot-password-email">
+							<a href="#">Забыли пароль?</a>
+						</div>
+						<div class="login-register">
+							<a onclick="showREG('none')" class="register-link">Зарегистрироваться</a>
+						</div>
+						<button type="submit" class="btn">Войти</button>
+					</form>
+				</div>
+			</div>
+			<div id="REGISTER-BLOCK">
+				<img onclick="showREGCLOSE('none')" class="close" src="img/header-menu/closeIMG.png" alt="">
+				<img onclick="showBack('none')" class="back" src="img/header-menu/arrowBackToLog.png" alt="">
+				<div class="form-box">
+					<h2>Регистрация</h2>
+					<form action="#">
+						<div class="input-box1">
+							<input type="Username" required>
+							<label>ФИО</label>
+						</div>
+						<div class="input-box2">
+							<input type="email" required>
+							<label>Почта</label>
+						</div>
+						<div class="input-box3">
+							<input type="password" required>
+							<label>Пароль</label>
+						</div>
+						<div class="input-box4">
+							<input type="password" required>
+							<label>Повторите пароль</label>
+						</div>
+						<div class="login-register">
+							<a onclick="showBack('none')" class="login-link">Уже есть аккаунт?</a>
+						</div>
+						<button type="submit" class="btn">Продолжить</button>
+					</form>
+				</div>
+			</div>
+			</section>
+			<!-- Другой Блок Регистрации -->
+			<div class="content">
+
+			<section>
+					<div class="banner-warp">
+						<div class="container">
+							<div id="hero-banner" class="banner">
+								<span class="banner__text">EXPERT CARE</span>
+								<b class="banner__trend">OFF THE DIRT</b>
+								<span class="banner__text_ru">Доверьте свою обувь нам.</span>
+								<div class="banner-link-warp">
+									<a href="#" class="banner__link btn-primary"> Заказать </a>
+								</div>
+							</div>
+						</div>
+					</div>
+			</section>
+
+			<section>
+					<div class="container">
+						<div class="about-cleans_container">
+							<div class="about-cleans_block-img">
+								<img class="about-cleans_img " src="img/about-us/dominik-martin-b2-fBVrfx0o-unsplash 1.png" alt="bg-block">
+								<h2>КОМПЛЕКСНЫЙ <br> ПОДХОД</h2>
+								<p>ПОЗАБОТЬТЕСЬ О СЕБЕ</p>
+								<img class="arrow-icon" src=".//img/about-us/Arrow 1.png" alt="arrow">
+							</div>
+							<div class="about-cleans_block-text">
+								<h2 class="header-text_about-cleans">CLEANS</h2>
+								<p class="description-text_about-cleans">– это команда профессионалов, которая специализируется
+									на химчистке обуви. Мы понимаем, что обувь
+										– это не только элемент гардероба,
+									но и зеркало Вашей личной гигиены.</p>
+								<button class="btn_about-cleans">Подробнее</button>
+							</div>
+						</div>
+						
+					</div>
+			</section>
+
+			<section>
+				<div class="container">
+					<div class="gallery">
+						<div class="gallery_top">
+							<div class="gallery-top-left">
+								<div class="gallery-title_1 title-section_gallery">
+									<h2> ПРИМЕРЫ </h2>
+								</div>
+							<div class="gallery-top-left-image">
+								<img class="gallery-img_1" src="img/gellary/gellary_1.png" alt="Кроссовки">
+							</div>
+							</div>
+							<div class="gallery-top-right">
+								<div class="gallery-top-right-image">
+									<img class="gallery-img" src="img/gellary/gellary_2.png" alt="Кроссовки">
+								</div>
+							</div>
+						</div>
+						<div class="gallery-bottom">
+							<div class="gallery-bottom-left">
+							<div class="gallery-bottom-left-image">
+								<img class="gallery-img" src="img/gellary/gellary_3.png" alt="Кроссовки">
+							</div>
+							</div>
+							<div class="gallery-bottom-right">
+								<div class="gallery-title_2 title-section_gallery">
+									<h2> РАБОТ </h2>
+								</div>
+								<div class="gallery-bottom-right-image">
+									<img class="gallery-img" src="img/gellary/gellary_4.png" alt="Кроссовки">
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section>
+					<div class="container">
+						<div id="about-us-warp-href" class="about-us-warp">
+							<div class="about-us-warp-header title-section">
+										<h2>ПОЧЕМУ СТОИТ</h2>
+										<h2>ВЫБРАТЬ НАС?</h2>
+							</div>
+							<div class="about-us-warp-cards">
+								<div class="about-us-warp-card">
+									<div class="about-us-warp-card-header">
+										<div class="card-number">1</div>
+									</div>
+									<div class="about-us-warp-card-header-3">
+										<h3>Качество обслуживания</h3>
+									</div>
+									<p>Мы обеспечиваем высокое качество химчистки обуви,
+										которое невозможно достичь при использовании домашних средств</p>
+
+								</div>
+
+								<div class="about-us-warp-card">
+
+									<div class="about-us-warp-card-header">
+										<div class="card-number">2</div>
+									</div>
+
+									<div class="about-us-warp-card-header-4">
+										<h3>Мастерство</h3>
+									</div>
+
+									<p>Наша команда профессионалов обладает многолетним
+										опытом и знаниями в области химчистки обуви</p>
+
+								</div>
+
+								<div class="about-us-warp-card">
+
+									<div class="about-us-warp-card-header">
+										<div class="card-number">3</div>
+									</div>
+
+									<div class="about-us-warp-card-header-4">
+										<h3>Удобство</h3>
+									</div>
+
+									<p>Наш сервис предоставляет удобный способ оформления заказа
+										и очистки обуви, которые экономят время клиентов</p>
+
+								</div>
+
+								<div class="about-us-warp-card">
+
+									<div class="about-us-warp-card-header">
+										<div class="card-number">4</div>
+									</div>
+
+									<div class="about-us-warp-card-header-4">
+										<h3>Экологичность</h3>
+									</div>
+
+									<p>Наша химчистка использует только безопасные
+										и экологически чистые средства для химчистки обуви</p>
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+			</section>
+
+			<section>
+				<div class="container">
+					<div id="Serv" class="Services">
+						<div class="Services-header title-section">
+							<h2>НАШИ</h2>
+							<h2>УСЛУГИ</h2>
+						</div>
+						<nav class="Services-nav">
+								<ul class="Services-nav__items">
+									<li data-li="Кроссовки" class="Services-nav__item active"><a class="Services-nav__item-link active" href="#" onclick="return false">Кроссовки</a></li>
+									<li data-li="Классическая" class="Services-nav__item"><a class="Services-nav__item-link" href="#" onclick="return false">Классическая</a></li>
+									<li data-li="Премиальная" class="Services-nav__item"><a class="Services-nav__item-link" href="#" onclick="return false">Премиальная</a></li>
+									<li data-li="Сезонная" class="Services-nav__item"><a class="Services-nav__item-link" href="#" onclick="return false">Сезонная</a></li>
+									<li data-li="Дополнительно" class="Services-nav__item"><a class="Services-nav__item-link" href="#" onclick="return false">Дополнительно</a></li>
+								</ul>
+						</nav>	
+					</div>
+				<div class="Services-cards">
+					<div data-w-tab="Tab 1" class="item Кроссовки">
+						<div class="price-block-01">
+							<div class="price-block-01-left">
+								<div class="price-block-01-left-header">
+									<div class="card-header">
+										КЕДЫ И КРОССОВКИ
+									</div>
+								</div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												ЛЕГКИЕ
+											</span>
+										</p>
+										<p class="body-text-white">
+											Синтетика/Сетка/Резина
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">2000</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="price-block-01-left-line"></div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												СТАНДАРТНЫЕ
+											</span>
+										</p>
+										<p class="body-text-white">
+											Кожа/Замша/Нубук/Ткань/ Комбинированные материалы
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">2500</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="price-block-01-left-line"></div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												ГЛУБОКАЯ ОЧИСТКА
+											</span>
+										</p>
+										<p class="body-text-white">
+											Для кроссовок, которые нужно спасать
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">+500</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="price-block-01-right">
+								<img src="img/Services/Maxium_5 1.png" alt="кроссовок">
+								<div class="price-block-01-right-time">
+									<div class="price-block-01-right-time-1">
+									10
+									</div>
+									<div class="price-block-01-right-time-2">
+										<div class="body-text-white-2">
+											<span class="text-span-6">ДНЕЙ</span>
+										</div>
+										<div class="body-text-white">Срок выполнения работ</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-w-tab="Tab 2" class="item Классическая" style="display: none;">
+						<div class="price-block-02">
+							<div class="price-block-01-left">
+								<div class="price-block-01-left-header">
+									<div class="card-header">
+										КЛАССИЧЕСКАЯ ОБУВЬ
+									</div>
+								</div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												ЛЕГКИЕ
+											</span>
+										</p>
+										<p class="body-text-white">
+											Туфли, мокасины, лоферы
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">2500</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="price-block-01-left-line"></div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												СТАНДАРТНЫЕ
+											</span>
+										</p>
+										<p class="body-text-white">
+											Ботинки, полусапоги
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">3000</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="price-block-01-left-line"></div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												ПОЛНЫЙ УХОД
+											</span>
+										</p>
+										<p class="body-text-white">
+											Обувь на кожаной подошве
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">+1000</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="price-block-01-right">
+								<img src="img/Services/Maxium_5 2.png" alt="кроссовок">
+								<div class="price-block-01-right-time">
+									<div class="price-block-01-right-time-1">
+									10
+									</div>
+									<div class="price-block-01-right-time-2">
+										<div class="body-text-white-2">
+											<span class="text-span-6">ДНЕЙ</span>
+										</div>
+										<div class="body-text-white">Срок выполнения работ</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-w-tab="Tab 3" class="item Премиальная" style="display: none;">
+						<div class="price-block-03">
+							<div class="price-block-01-left">
+								<div class="price-block-01-left-header">
+									<div class="card-header">
+										ПРЕМИУМНАЯ ОБУВЬ
+									</div>
+								</div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												ДЕЛИКАТНАЯ ОЧИСТКА
+											</span>
+										</p>
+										<p class="body-text-white">
+											Для кроссовок и обуви из люкс-сегмента
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">4000</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="price-block-01-left-line"></div>
+								<div class="price-block-02-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												ВЛАГООТВОДЯЩАЯ ПРОПИТКА
+											</span>
+										</p>
+										<p class="body-text-white">
+											Обработаем верхнюю часть кроссовка для защиты от пыли, грязи и влаги
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">500</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="price-block-01-right">
+								<img src="img/Services/Maxium_5 3.png" alt="кроссовок">
+								<div class="price-block-01-right-time">
+									<div class="price-block-01-right-time-1">
+									7
+									</div>
+									<div class="price-block-01-right-time-2">
+										<div class="body-text-white-2">
+											<span class="text-span-6">ДНЕЙ</span>
+										</div>
+										<div class="body-text-white">Срок выполнения работ</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-w-tab="Tab 4" class="item Сезонная" style="display: none;">
+						<div class="price-block-04">
+							<div class="price-block-01-left">
+								<div class="price-block-01-left-header">
+									<div class="card-header">
+										ЗИМНЯЯ ОБУВЬ
+									</div>
+								</div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												НИЗКАЯ ОБУВЬ
+											</span>
+										</p>
+										<p class="body-text-white">
+											Зимняя или демисезонная обувь
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">3500</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="price-block-01-left-line"></div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												СРЕДНЯЯ
+											</span>
+										</p>
+										<p class="body-text-white">
+											Ботинки/полуботинки
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">4000</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="price-block-01-left-line"></div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												ВЫСОКАЯ
+											</span>
+										</p>
+										<p class="body-text-white">
+											Высокие ботинки/Сапоги/Ботфорты
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">5000</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="price-block-01-right">
+								<img src="img/Services/Maxium_5 4.png" alt="кроссовок">
+								<div class="price-block-01-right-time">
+									<div class="price-block-01-right-time-1">
+									10
+									</div>
+									<div class="price-block-01-right-time-2">
+										<div class="body-text-white-2">
+											<span class="text-span-6">ДНЕЙ</span>
+										</div>
+										<div class="body-text-white">Срок выполнения работ</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-w-tab="Tab 5" class="item Дополнительно" style="display: none;">
+						<div class="price-block-05">
+							<div class="price-block-01-left">
+								<div class="price-block-01-left-header">
+									<div class="card-header">
+										ДОПОЛНИТЕЛЬНЫЕ УСЛУГИ
+									</div>
+								</div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												Дезодорант
+											</span>
+										</p>
+										<p class="body-text-white">
+											Обработаем внутреннюю часть кроссовка антибактериальным средством
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">400</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="price-block-01-left-line"></div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												Локальная реставрация и покраска потертостей и царапин
+											</span>
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">1500</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="price-block-01-left-line"></div>
+								<div class="price-block-01-left-content">
+									<div class="price-block-01-left-content-1-1">
+										<p class="body-text-white">
+											<span class="text-span-5">
+												Отбеливание подошвы
+											</span>
+										</p>
+									</div>
+									<div class="price-block-01-left-content-1-2">
+										<div class="price-block-01-left-content-1-2-price">
+											<div class="card-price">1000</div>
+											<div class="ruble-price-01-block">
+												<p class="price-text-white">руб.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="price-block-01-right">
+								<img src="img/Services/Maxium_5 5.png" alt="кроссовок">
+								<div class="price-block-01-right-time">
+									<div class="price-block-01-right-time-1">
+									10
+									</div>
+									<div class="price-block-01-right-time-2">
+										<div class="body-text-white-2">
+											<span class="text-span-6">ДНЕЙ</span>
+										</div>
+										<div class="body-text-white">Срок выполнения работ</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="Services-btn">
+					<button class="btn-services"> <a href="AdminPanel.html"> Заказать </a>  </button>
+				</div>
+			</div>
+			</section>
+			
+			<section>
+				<div class="container">
+					<div class="review-header title-section">
+						<h2>ВАШИ</h2>
+						<h2>ОТЗЫВЫ</h2>
+					</div>
+					<div class="review-section" id="review">
+						<div class="review-box-cards">
+							<div class="swiper-slide review-block-left">
+								<div class="review-block-card">
+									<div class="text-in-card">
+										<p>С другой стороны постоянный количественный рост и сфера нашей активности играет важную роль в 
+											формировании соответствующий условий активизации. Идейные соображения высшего порядка, а также рамки 
+											и место обучения кадров требуют определения и уточнения форм развития. </p>
+									</div>
+									<div class="rate-sec">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+									</div>
+								</div>
+								<div class="review-block-card-under"></div>
+								<div class="user-block-card">
+									<img src="img/review/userPhoto.png" alt="Картинка Профиля">
+									<div class="user-name-info">
+										<p>Имя Фамилов</p>
+										<div class="user-time-review-past">
+											<p>10 дней назад</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide review-block-center">
+								<div class="review-block-card">
+									<div class="text-in-card">
+										<p>С другой стороны постоянный количественный рост и сфера нашей активности играет важную роль в формировании
+											соответствующий условий активизации. </p>
+									</div>
+									<div class="rate-sec">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+									</div>
+								</div>
+								<div class="review-block-card-under"></div>
+								<div class="user-block-card">
+									<img src="img/review/userPhoto.png" alt="Картинка Профиля">
+									<div class="user-name-info">
+										<p>Имя Фамилов</p>
+										<div class="user-time-review-past">
+											<p>10 дней назад</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide review-block-right">
+								<div class="review-block-card">
+									<div class="text-in-card">
+										<p>Это кринж бро</p>
+									</div>
+									<div class="rate-sec">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/starCOLORED.png" alt="Звезда">
+										<img class="star" src="img/review/star.png" alt="Звезда">
+									</div>
+								</div>
+								<div class="review-block-card-under"></div>
+								<div class="user-block-card">
+									<img src="img/review/userPhoto.png" alt="Картинка Профиля">
+									<div class="user-name-info">
+										<p>Имя Фамилов</p>
+										<div class="user-time-review-past">
+											<p>10 дней назад</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="review-block-write">
+							<div class="review-block-write-header">
+								<h2 class="review-block-write-header_h2">ОСТАВИТЬ</h2>
+								<h2>СВОЙ</h2>
+							</div>
+							<div class="user-block-rating_write_stat">
+							<div class="user-block-rating-stat">
+								<input type="radio" name="rate" id="rate-5">
+								<label for="rate-5" class="fas fa-star"></label>
+								<input type="radio" name="rate" id="rate-4">
+								<label for="rate-4" class="fas fa-star"></label>
+								<input type="radio" name="rate" id="rate-3">
+								<label for="rate-3" class="fas fa-star"></label>
+								<input type="radio" name="rate" id="rate-2">
+								<label for="rate-2" class="fas fa-star"></label>
+								<input type="radio" name="rate" id="rate-1">
+								<label for="rate-1" class="fas fa-star"></label>
+							</div>
+							<div class="user-block-rating_write">
+							<div class="user-block-rating-prof">
+								<img class="prof-pic" src="img/review/userPhoto.png" alt="Картинка Профиля">
+							</div>
+							<div class="review-write-input">
+								<form action="" method="post">
+								<textarea cols="30"></textarea>
+								</form>
+							</div>
+							</div>
+							</div>
+						</div>
+						<button class="btn_review-section">Отправить</button>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<a href="http://t.me/botic_cleans_bot" target="_blank" >
+					<div class="telegram-banner">
+						<div class="telegram-banner_text">
+							<div class="telegram-banner_text-title">
+								Подпишитесь на нашего бота в Telegram!
+							</div>
+							<div class="telegram-banner_text-subtitle">
+								Заказывайте и узнавайте о новостях
+							</div>
+						</div>
+						<div class="telegram-banner-image">
+									<img src="img/telegram_banner/telegram.png" alt="">
+						</div>
+					</div>
+				</a>
+			</section>
+
+			<footer class="footer">
+				<div class="logo text">
+					CLEANS
+				</div>
+				<div class="footer-right">
+					<div class="mirea text">
+						РТУ МИРЭА
+					</div>
+					<div class="project text">
+						Проектная работа
+					</div>
+				</div>
+			</footer>
+
+			</div>
+		</div>
+
+	</main>
+
+	
+
+</body>
