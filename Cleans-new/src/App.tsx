@@ -11,6 +11,7 @@ import starCOLORED from './assets/review/starCOLORED.png';
 import star from './assets/review/star.png';
 import userPhoto from './assets/review/userPhoto.png';
 
+import Services from './component/service';
 
 const App: React.FC = () => {
 
@@ -190,6 +191,8 @@ const App: React.FC = () => {
             </div>
           </div>
         </section>
+
+        <Services/>
 
         <section>
           <div className="container">
