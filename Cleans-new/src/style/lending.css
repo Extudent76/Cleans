@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap');
 *{
@@ -11,7 +12,7 @@
 }
 body {
 	color: #22262A;
-	font: 400 15px/22px 'Popins', 'Arial', 'Helvetica', sans-serif;
+	font: 400 15px/22px 'Poppins', 'Arial', 'Helvetica', sans-serif;
 }
 a {
 	color: inherit;
@@ -148,7 +149,7 @@ grid-column-gap: 4.3em;
 }
 
 .header-user__item span{
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 22px;
@@ -179,7 +180,7 @@ path {transition: fill .4s ease;}
 .regButton{
 	height: 25px;
 	border: none;
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 22px;
@@ -194,7 +195,7 @@ path {transition: fill .4s ease;}
 
 
 #LOGIN-BLOCK{
-	font-family: Montserrat;
+	font-family: 'Montserrat', sans-serif;
 	position: absolute;
 	width: 700px;
 	height: 600px;
@@ -318,7 +319,7 @@ path {transition: fill .4s ease;}
 }
 
 .forgot-password-email{
-	font-family: Montserrat;
+	font-family:  'Montserrat', sans-serif;
 	font-size: 18px;
 	color: #999999;
 	justify-content: center;
@@ -330,7 +331,7 @@ path {transition: fill .4s ease;}
 }
 
 .login-register{
-	font-family: Montserrat;
+	font-family:  'Montserrat', sans-serif;
 	font-size: 18px;
 	color: #999999;
 	position: absolute;
@@ -345,7 +346,7 @@ path {transition: fill .4s ease;}
 	border-radius: 8px;
 	border: none;
 	font-weight: 700;
-	font-family: Montserrat;
+	font-family:  'Montserrat', sans-serif;
 	font-size: 14px;
 	color: #fff;
 	padding: 16px 65px 16px 65px;
@@ -371,7 +372,7 @@ path {transition: fill .4s ease;}
 }
 
 #REGISTER-BLOCK{
-	font-family: Montserrat;
+	font-family:  'Montserrat', sans-serif;
 	position: absolute;
 	width: 700px;
 	height: 600px;
@@ -539,7 +540,7 @@ path {transition: fill .4s ease;}
 	top: 90%;
 }
 #REGISTER-BLOCK .btn{
-	font-family: Montserrat;
+	font-family:  'Montserrat', sans-serif;
 	position: relative;
 	left: 30%;
 	top: 20px;
@@ -577,7 +578,7 @@ path {transition: fill .4s ease;}
 /* BANER */
 .banner-warp{
 	padding-bottom: 150px;
-	background: url(./assets/banner/header_photo.png);
+	background: url(../assets/banner/header_photo.png);
 	background-repeat: no-repeat;
 	max-width: 1440px;
 	height: 100%;
@@ -591,14 +592,14 @@ path {transition: fill .4s ease;}
 	padding-top: 400px;
 }
 .banner__text{
-	font-family: 'Poppins';
+	font-family: 'Poppins', sans-serif;
 	display: block;
 	font-size: 18px;
 	font-weight: 500;
 	line-height: 27px;
 }
 .banner__text_ru{
-	font-family: 'Golos Text';
+	font-family: 'Golos Text', sans-serif;
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 21.6px;
@@ -739,7 +740,7 @@ path {transition: fill .4s ease;}
 	margin-bottom: 20px;
 }
 .title-section_gallery{
-	font-family: 'Golos Text';
+	font-family: 'Golos Text', sans-serif;
 	font-size: 70px;
 	font-weight: 700;
 	line-height: 84px;
@@ -792,7 +793,7 @@ path {transition: fill .4s ease;}
 	width: 33em;
 }
 .title-section h2{
-font-family: 'Golos Text';
+font-family: 'Golos Text', sans-serif;
 font-size: 60px;
 font-weight: 700;
 line-height: 72px;
@@ -826,7 +827,7 @@ line-height: 72px;
 margin-bottom: 2.66em;
 }
 .card-number{
-font-family: 'Golos Text';
+font-family: 'Golos Text', sans-serif;
 font-size: 40px;
 font-weight: 600;
 line-height: 48px;
@@ -838,19 +839,19 @@ line-height: 48px;
 	padding-bottom: 4.734em;
 }
 .about-us-warp-card-header-4 h3 {
-	font-family: 'Golos Text';
+	font-family: 'Golos Text', sans-serif;
 	font-size: 25px;
 	font-weight: 500;
 	line-height: 30px;
 }
 .about-us-warp-card-header-3 h3{
-	font-family: 'Golos Text';
+	font-family: 'Golos Text', sans-serif;
 	font-size: 25px;
 	font-weight: 500;
 	line-height: 30px;
 }
 .about-us-warp-card p{
-	font-family: 'Golos Text';
+	font-family: 'Golos Text', sans-serif;
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 21.6px;
@@ -858,7 +859,7 @@ line-height: 48px;
 	height: 134px;
 }
 .about-us-warp-card:first-child p{
-	font-family: 'Golos Text';
+	font-family: 'Golos Text', sans-serif;
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 21.6px;
@@ -1119,7 +1120,7 @@ line-height: 48px;
 
 
 .review-block-card{
-	font-family: Montserrat;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
 	display: flex;
 	flex-direction: column;
@@ -1160,7 +1161,7 @@ line-height: 48px;
 .user-block-card{
 	display: flex;
 	flex-wrap: wrap;
-	font-family: Montserrat;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
 }
 
@@ -1213,7 +1214,7 @@ line-height: 48px;
 
 .review-write-input textarea{
 	display: flex;
-	font-family: Montserrat;
+	font-family:  'Montserrat', sans-serif;
 	box-sizing: border-box;
 	word-wrap:break-word;
 	width: 647px;
@@ -1316,14 +1317,14 @@ input:checked ~ label{
 		align-items: center;
 	}
 	.footer-right{
-		font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;
 	font-style: normal;
 	font-weight: 500;
 	font-size: 20px;
 	line-height: 24px;
 	}
 	.logo{
-	font-family: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;
 	font-style: normal;
 	font-weight: 800;
 	font-size: 50px;

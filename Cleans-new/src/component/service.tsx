@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../style.css';
+import '../index.css';
 import Maxium_5_1 from '../assets/Services/Maxium_5 1.png';
 import Maxium_5_2 from '../assets/Services/Maxium_5 2.png';
 import Maxium_5_3 from '../assets/Services/Maxium_5 3.png';

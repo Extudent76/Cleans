@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text&family=Montserrat&family=Poppins&display=swap');
+
+.registration-form {
+  font-family: 'Poppins', sans-serif;
+  max-width: 400px;
+  margin: 0px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+}
+
+.registration-form h1 {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #333333;
+}
+
+.registration-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #555555;
+}
+
+.registration-form input {
+  font-family: 'Golos Text', sans-serif;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px; /* Уменьшен отступ для компактности */
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.registration-form .error-message {
+  color: #ff0000;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.registration-form .forgot-password-link {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.registration-form .forgot-password-link a {
+  color: #007BFF;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.registration-form .forgot-password-link a:hover {
+  text-decoration: underline;
+}
+
+.registration-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.registration-form button:hover {
+  background-color: #45a049;
+}
+
+.registration-form div {
+  margin-bottom: 20px;
+}
+
+.registration-form div:nth-child(3) {
+    margin-bottom: 5px;
+  }
+
+
