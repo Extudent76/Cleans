@@ -1,0 +1,44 @@
+/* ServicesPage.css */
+.services-page {
+    font-family: 'Poppins', sans-serif;
+    color: #22262A;
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .services-page h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #53A835;
+    margin-bottom: 20px;
+  }
+  
+  .services-page p {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  
+  .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .order-button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    background-color: #53A835;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+  }
+  
+  .order-button:hover {
+    background-color: #439427;
+  }
