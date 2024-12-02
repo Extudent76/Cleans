@@ -40,6 +40,12 @@ const RegisterForm: React.FC = () => {
             <ErrorMessage name="password" component="div" className="error-message" />
           </div>
 
+          <div>
+            <label>Ваша рефералка OlimpBet
+              <input type='text' disabled value={'ZXhkSGHnx_Sdhjgsa62'} />
+            </label>
+          </div>
+
           <div className="forgot-password-link">
             <Link to="/forgot-password">Забыли пароль?</Link>
           </div>

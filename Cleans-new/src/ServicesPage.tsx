@@ -10,14 +10,14 @@ interface Service {
   price: number;
 }
 
-const ServicesPage: React.FC = () => {
-  const servicesData: Service[] = [
-    { id: 1, title: 'Чистка обуви', description: 'Профессиональная чистка обуви, удаление пятен и грязи', price: 800 },
-    { id: 2, title: 'Ремонт обуви', description: 'Ремонт обуви, замена подошвы и устранение дефектов', price: 2000 },
-    { id: 3, title: 'Полировка обуви', description: 'Полировка обуви для придания блеска и защиты', price: 500 },
-    { id: 4, title: 'Уход за замшевой обувью', description: 'Специальный уход за замшевой обувью, удаление пятен', price: 1000 },
-  ];
+const servicesData: Service[] = [
+  { id: 1, title: 'Чистка обуви', description: 'Профессиональная чистка обуви, удаление пятен и грязи', price: 800 },
+  { id: 2, title: 'Ремонт обуви', description: 'Ремонт обуви, замена подошвы и устранение дефектов', price: 2000 },
+  { id: 3, title: 'Полировка обуви', description: 'Полировка обуви для придания блеска и защиты', price: 500 },
+  { id: 4, title: 'Уход за замшевой обувью', description: 'Специальный уход за замшевой обувью, удаление пятен', price: 1000 },
+];
 
+const ServicesPage: React.FC = () => {
   const [selectedServices, setSelectedServices] = useState<{ [key: number]: number }>({});
 
   const handleServiceChange = (id: number, count: number) => {
