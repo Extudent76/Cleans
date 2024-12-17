@@ -1,32 +1,23 @@
-import React, { useState, ChangeEvent}  from 'react';
-import { useNavigate } from 'react-router-dom';
-import './index.css';
-import LOGO from './assets/header-menu/LOGO CLEANS.png';
-import about_cleans_img from './assets/about-us/dominik-martin-b2-fBVrfx0o-unsplash 1.png';
-import Arrow from './assets/about-us/Arrow 1.png';
-import gellary_1 from './assets/gellary/gellary_1.png';
-import gellary_2 from './assets/gellary/gellary_2.png';
-import gellary_3 from './assets/gellary/gellary_3.png';
-import gellary_4 from './assets/gellary/gellary_4.png';
-import starCOLORED from './assets/review/starCOLORED.png';
-import star from './assets/review/star.png';
-import userPhoto from './assets/review/userPhoto.png';
+import React, { useState, ChangeEvent } from "react";
+import "./index.css";
+import about_cleans_img from "./assets/about-us/dominik-martin-b2-fBVrfx0o-unsplash 1.png";
+import Arrow from "./assets/about-us/Arrow 1.png";
+import gellary_1 from "./assets/gellary/gellary_1.png";
+import gellary_2 from "./assets/gellary/gellary_2.png";
+import gellary_3 from "./assets/gellary/gellary_3.png";
+import gellary_4 from "./assets/gellary/gellary_4.png";
+import starCOLORED from "./assets/review/starCOLORED.png";
+import star from "./assets/review/star.png";
+import userPhoto from "./assets/review/userPhoto.png";
 
-import Services from './component/service';
+import Services from "./component/service";
 
 const Lending: React.FC = () => {
-
   const [rating, setRating] = useState<number>(0);
-  const [comment, setComment] = useState<string>('');
+  const [comment, setComment] = useState<string>("");
 
   const handleRatingChange = (rate: number): void => {
     setRating(rate);
-  };
-
-  const navigate = useNavigate();
-
-  const handleRegisterClick = () => {
-    navigate('/register');
   };
 
   const handleCommentChange = (e: ChangeEvent<HTMLTextAreaElement>): void => {
@@ -35,44 +26,6 @@ const Lending: React.FC = () => {
 
   return (
     <div>
-      <header id="hero-banner-href" className="header-menu">
-        <div className="container_menu">
-          <div className="header-price-wrapper">
-            <div className="header">
-              <a href="#hero-banner">
-                <img className="header__title" src= {LOGO} alt="Logo" />
-              </a>
-              <nav className="header-nav">
-                <ul>
-                  <li className="header-nav__item">
-                    <a className="header-nav__item-link" href="#hero-banner">ГЛАВНАЯ</a>
-                  </li>
-                  <li className="header-nav__item">
-                    <a className="header-nav__item-link" href="#about-us-warp-href">О НАС</a>
-                  </li>
-                  <li className="header-nav__item">
-                    <a className="header-nav__item-link" href="#Serv">УСЛУГИ</a>
-                  </li>
-                  <li className="header-nav__item">
-                    <a className="header-nav__item-link" href="#review">ОТЗЫВЫ</a>
-                  </li>
-                  <li className="header-nav__item">
-                    <a className="header-nav__item-link" href="#">ЗАКАЗАТЬ</a>
-                  </li>
-                </ul>
-              </nav>
-              <div className="tg-and-user-block">
-                <div className="header-user">
-                  <button className="regButton" onClick={handleRegisterClick}>
-                    ВХОД
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-
       <main>
         <section>
           <div className="banner-warp">
@@ -80,9 +33,14 @@ const Lending: React.FC = () => {
               <div id="hero-banner" className="banner">
                 <span className="banner__text">EXPERT CARE</span>
                 <b className="banner__trend">OFF THE DIRT</b>
-                <br /><span className="banner__text_ru">Доверьте свою обувь нам.</span>
+                <br />
+                <span className="banner__text_ru">
+                  Доверьте свою обувь нам.
+                </span>
                 <div className="banner-link-warp">
-                  <a href="#" className="banner__link btn-primary">Заказать</a>
+                  <a href="#" className="banner__link btn-primary">
+                    Заказать
+                  </a>
                 </div>
               </div>
             </div>
@@ -93,17 +51,24 @@ const Lending: React.FC = () => {
           <div className="container">
             <div className="about-cleans_container">
               <div className="about-cleans_block-img">
-                <img className="about-cleans_img" src={about_cleans_img} alt="bg-block" />
-                <h2>КОМПЛЕКСНЫЙ <br /> ПОДХОД</h2>
+                <img
+                  className="about-cleans_img"
+                  src={about_cleans_img}
+                  alt="bg-block"
+                />
+                <h2>
+                  КОМПЛЕКСНЫЙ <br /> ПОДХОД
+                </h2>
                 <p>ПОЗАБОТЬТЕСЬ О СЕБЕ</p>
-                <img className="arrow-icon" src= {Arrow} alt="arrow" />
+                <img className="arrow-icon" src={Arrow} alt="arrow" />
               </div>
               <div className="about-cleans_block-text">
                 <h2 className="header-text_about-cleans">CLEANS</h2>
-                <p className="description-text_about-cleans">– это команда профессионалов, которая специализируется
-                  на химчистке обуви. Мы понимаем, что обувь
-                  – это не только элемент гардероба,
-                  но и зеркало Вашей личной гигиены.</p>
+                <p className="description-text_about-cleans">
+                  – это команда профессионалов, которая специализируется на
+                  химчистке обуви. Мы понимаем, что обувь – это не только
+                  элемент гардероба, но и зеркало Вашей личной гигиены.
+                </p>
                 <button className="btn_about-cleans">Подробнее</button>
               </div>
             </div>
@@ -119,19 +84,31 @@ const Lending: React.FC = () => {
                     <h2>ПРИМЕРЫ</h2>
                   </div>
                   <div className="gallery-top-left-image">
-                    <img className="gallery-img_1" src={gellary_1} alt="Кроссовки" />
+                    <img
+                      className="gallery-img_1"
+                      src={gellary_1}
+                      alt="Кроссовки"
+                    />
                   </div>
                 </div>
                 <div className="gallery-top-right">
                   <div className="gallery-top-right-image">
-                    <img className="gallery-img"src={gellary_2} alt="Кроссовки" />
+                    <img
+                      className="gallery-img"
+                      src={gellary_2}
+                      alt="Кроссовки"
+                    />
                   </div>
                 </div>
               </div>
               <div className="gallery-bottom">
                 <div className="gallery-bottom-left">
                   <div className="gallery-bottom-left-image">
-                    <img className="gallery-img" src={gellary_3} alt="Кроссовки" />
+                    <img
+                      className="gallery-img"
+                      src={gellary_3}
+                      alt="Кроссовки"
+                    />
                   </div>
                 </div>
                 <div className="gallery-bottom-right">
@@ -139,7 +116,11 @@ const Lending: React.FC = () => {
                     <h2>РАБОТ</h2>
                   </div>
                   <div className="gallery-bottom-right-image">
-                    <img className="gallery-img" src={gellary_4} alt="Кроссовки" />
+                    <img
+                      className="gallery-img"
+                      src={gellary_4}
+                      alt="Кроссовки"
+                    />
                   </div>
                 </div>
               </div>
@@ -162,7 +143,10 @@ const Lending: React.FC = () => {
                   <div className="about-us-warp-card-header-3">
                     <h3>Качество обслуживания</h3>
                   </div>
-                  <p>Мы обеспечиваем высокое качество химчистки обуви, которое невозможно достичь при использовании домашних средств.</p>
+                  <p>
+                    Мы обеспечиваем высокое качество химчистки обуви, которое
+                    невозможно достичь при использовании домашних средств.
+                  </p>
                 </div>
 
                 <div className="about-us-warp-card">
@@ -172,7 +156,10 @@ const Lending: React.FC = () => {
                   <div className="about-us-warp-card-header-4">
                     <h3>Мастерство</h3>
                   </div>
-                  <p>Наша команда профессионалов обладает многолетним опытом и знаниями в области химчистки обуви.</p>
+                  <p>
+                    Наша команда профессионалов обладает многолетним опытом и
+                    знаниями в области химчистки обуви.
+                  </p>
                 </div>
 
                 <div className="about-us-warp-card">
@@ -182,7 +169,10 @@ const Lending: React.FC = () => {
                   <div className="about-us-warp-card-header-4">
                     <h3>Удобство</h3>
                   </div>
-                  <p>Наш сервис предоставляет удобный способ оформления заказа и очистки обуви, которые экономят время клиентов.</p>
+                  <p>
+                    Наш сервис предоставляет удобный способ оформления заказа и
+                    очистки обуви, которые экономят время клиентов.
+                  </p>
                 </div>
 
                 <div className="about-us-warp-card">
@@ -192,14 +182,17 @@ const Lending: React.FC = () => {
                   <div className="about-us-warp-card-header-4">
                     <h3>Экологичность</h3>
                   </div>
-                  <p>Наша химчистка использует только безопасные и экологически чистые средства для химчистки обуви.</p>
+                  <p>
+                    Наша химчистка использует только безопасные и экологически
+                    чистые средства для химчистки обуви.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <Services/>
+        <Services />
 
         <section>
           <div className="container">
@@ -214,13 +207,19 @@ const Lending: React.FC = () => {
                   <div className="review-block-card">
                     <div className="text-in-card">
                       <p>
-                        С другой стороны постоянный количественный рост и сфера нашей активности играет важную роль в
-                        формировании соответствующий условий активизации.
+                        С другой стороны постоянный количественный рост и сфера
+                        нашей активности играет важную роль в формировании
+                        соответствующий условий активизации.
                       </p>
                     </div>
                     <div className="rate-sec">
                       {[...Array(5)].map((_, i) => (
-                        <img key={i} className="star" src={starCOLORED} alt="Звезда" />
+                        <img
+                          key={i}
+                          className="star"
+                          src={starCOLORED}
+                          alt="Звезда"
+                        />
                       ))}
                     </div>
                   </div>
@@ -241,13 +240,19 @@ const Lending: React.FC = () => {
                   <div className="review-block-card">
                     <div className="text-in-card">
                       <p>
-                        С другой стороны постоянный количественный рост и сфера нашей активности играет важную роль в формировании
+                        С другой стороны постоянный количественный рост и сфера
+                        нашей активности играет важную роль в формировании
                         соответствующий условий активизации.
                       </p>
                     </div>
                     <div className="rate-sec">
                       {[...Array(5)].map((_, i) => (
-                        <img key={i} className="star" src={starCOLORED} alt="Звезда" />
+                        <img
+                          key={i}
+                          className="star"
+                          src={starCOLORED}
+                          alt="Звезда"
+                        />
                       ))}
                     </div>
                   </div>
@@ -271,7 +276,12 @@ const Lending: React.FC = () => {
                     </div>
                     <div className="rate-sec">
                       {[...Array(4)].map((_, i) => (
-                        <img key={i} className="star" src={starCOLORED} alt="Звезда" />
+                        <img
+                          key={i}
+                          className="star"
+                          src={starCOLORED}
+                          alt="Звезда"
+                        />
                       ))}
                       <img className="star" src={star} alt="Звезда" />
                     </div>
@@ -306,13 +316,20 @@ const Lending: React.FC = () => {
                           checked={rating === rate}
                           onChange={() => handleRatingChange(rate)}
                         />
-                        <label htmlFor={`rate-${rate}`} className="fas fa-star"></label>
+                        <label
+                          htmlFor={`rate-${rate}`}
+                          className="fas fa-star"
+                        ></label>
                       </React.Fragment>
                     ))}
                   </div>
                   <div className="user-block-rating_write">
                     <div className="user-block-rating-prof">
-                      <img className="prof-pic" src={userPhoto} alt="Картинка Профиля" />
+                      <img
+                        className="prof-pic"
+                        src={userPhoto}
+                        alt="Картинка Профиля"
+                      />
                     </div>
                     <div className="review-write-input">
                       <form onSubmit={(e) => e.preventDefault()}>
@@ -330,7 +347,6 @@ const Lending: React.FC = () => {
             </div>
           </div>
         </section>
-
       </main>
 
       <footer className="footer">

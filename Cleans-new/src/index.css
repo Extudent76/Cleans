@@ -1,8 +1,12 @@
-@import url('./style/lending.css');
-@import url('./style/registerForm.css');
-@import url('./style/register.css');
-@import url('./style/forgotPasswordPage.css');
-@import url('./style/serviceCard.css');
-@import url('./style/servicesPage.css');
-@import url('./style/cartPage.css');
-@import url('./style/cartItem.css');
+@import url("./style/lending.css");
+@import url("./style/registerForm.css");
+@import url("./style/register.css");
+@import url("./style/forgotPasswordPage.css");
+@import url("./style/serviceCard.css");
+@import url("./style/servicesPage.css");
+@import url("./style/cartPage.css");
+/* @import url('./style/cartItem.css'); */
+
+body {
+    padding-top: 96px;
+}

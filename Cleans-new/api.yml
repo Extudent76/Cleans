@@ -1,0 +1,1141 @@
+openapi: 3.1.0
+info:
+  title: Сервис чистки обуви
+  description: API для управления сервисом чистки обуви
+  version: 1.0.0
+paths:
+  "/auth/register":
+    post:
+      tags:
+      - Authentication
+      summary: Регистрация нового пользователя
+      description: Создает нового пользователя с ролью клиента.
+      operationId: register_auth_register_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/UserCreate"
+            example:
+              username: john_doe
+              email: john@example.com
+              password: strongpassword123
+        required: true
+      responses:
+        '200':
+          description: Пользователь успешно зарегистрирован
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/UserResponse"
+        '400':
+          description: Пользователь с таким именем или email уже существует
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+  "/auth/login":
+    post:
+      tags:
+      - Authentication
+      summary: Аутентификация пользователя
+      description: Выполняет вход пользователя и возвращает JWT токен для дальнейших
+        запросов. Деактивированные пользователи не могут войти в систему.
+      operationId: login_for_access_token_auth_login_post
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              "$ref": "#/components/schemas/Body_login_for_access_token_auth_login_post"
+        required: true
+      responses:
+        '200':
+          description: Успешная аутентификация
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/Token"
+        '400':
+          description: Неверное имя пользователя или пароль или учетная запись деактивирована
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+  "/auth/forgot-password":
+    post:
+      tags:
+      - Authentication
+      summary: Восстановление пароля
+      description: Отправляет инструкцию по восстановлению пароля на указанный email.
+      operationId: forgot_password_auth_forgot_password_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+              title: Email
+              description: Email пользователя
+            example: john@example.com
+        required: true
+      responses:
+        '200':
+          description: Инструкция отправлена на email
+          content:
+            application/json:
+              schema: {}
+        '404':
+          description: Пользователь с таким email не найден
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+  "/products/listProducts":
+    get:
+      tags:
+      - Products
+      summary: Список доступных продуктов
+      description: Получение списка доступных продуктов и услуг.
+      operationId: list_products_products_listProducts_get
+      parameters:
+      - name: skip
+        in: query
+        required: false
+        schema:
+          type: integer
+          default: 0
+          title: Skip
+      - name: limit
+        in: query
+        required: false
+        schema:
+          type: integer
+          default: 100
+          title: Limit
+      responses:
+        '200':
+          description: Список продуктов
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  "$ref": "#/components/schemas/ProductResponse"
+                title: Response List Products Products Listproducts Get
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+  "/products/addProduct":
+    post:
+      tags:
+      - Products
+      summary: Добавить новый продукт
+      description: Добавляет новый продукт или услугу в каталог (только для администратора).
+      operationId: add_product_products_addProduct_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/ProductCreate"
+        required: true
+      responses:
+        '200':
+          description: Продукт успешно добавлен
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/ProductResponse"
+        '401':
+          description: Неавторизованный доступ
+        '403':
+          description: Недостаточно прав
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+      security:
+      - OAuth2PasswordBearer: []
+  "/products/getProduct/{product_id}":
+    get:
+      tags:
+      - Products
+      summary: Получить информацию о продукте
+      description: Возвращает информацию о продукте по его ID.
+      operationId: get_product_products_getProduct__product_id__get
+      parameters:
+      - name: product_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          title: Product Id
+      responses:
+        '200':
+          description: Информация о продукте
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/ProductResponse"
+        '404':
+          description: Продукт не найден
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+  "/products/updateProduct/{product_id}":
+    put:
+      tags:
+      - Products
+      summary: Обновить продукт
+      description: Обновляет информацию о продукте (только для администратора).
+      operationId: update_product_products_updateProduct__product_id__put
+      security:
+      - OAuth2PasswordBearer: []
+      parameters:
+      - name: product_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          title: Product Id
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/ProductUpdate"
+      responses:
+        '200':
+          description: Продукт успешно обновлен
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/ProductResponse"
+        '401':
+          description: Неавторизованный доступ
+        '403':
+          description: Недостаточно прав
+        '404':
+          description: Продукт не найден
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+  "/products/deleteProduct/{product_id}":
+    delete:
+      tags:
+      - Products
+      summary: Удалить продукт
+      description: Удаляет продукт из каталога (только для администратора).
+      operationId: delete_product_products_deleteProduct__product_id__delete
+      security:
+      - OAuth2PasswordBearer: []
+      parameters:
+      - name: product_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          title: Product Id
+      responses:
+        '200':
+          description: Продукт успешно удален
+          content:
+            application/json:
+              schema: {}
+        '401':
+          description: Неавторизованный доступ
+        '403':
+          description: Недостаточно прав
+        '404':
+          description: Продукт не найден
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+  "/cart/displayCart":
+    get:
+      tags:
+      - Cart
+      summary: Просмотр корзины
+      description: Получение списка товаров в корзине текущего пользователя.
+      operationId: display_cart_cart_displayCart_get
+      responses:
+        '200':
+          description: Список товаров в корзине
+          content:
+            application/json:
+              schema:
+                items:
+                  "$ref": "#/components/schemas/CartItemResponse"
+                type: array
+                title: Response Display Cart Cart Displaycart Get
+        '401':
+          description: Неавторизованный доступ
+      security:
+      - OAuth2PasswordBearer: []
+  "/cart/addInCart":
+    post:
+      tags:
+      - Cart
+      summary: Добавить товар в корзину
+      description: Добавляет выбранный товар в корзину текущего пользователя.
+      operationId: add_in_cart_cart_addInCart_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/CartItemCreate"
+        required: true
+      responses:
+        '200':
+          description: Товар успешно добавлен в корзину
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/CartItemResponse"
+        '401':
+          description: Неавторизованный доступ
+        '404':
+          description: Товар не найден или недоступен
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+      security:
+      - OAuth2PasswordBearer: []
+  "/cart/deleteFromCart/{item_id}":
+    delete:
+      tags:
+      - Cart
+      summary: Удалить товар из корзины
+      description: Удаляет указанный товар из корзины текущего пользователя.
+      operationId: delete_from_cart_cart_deleteFromCart__item_id__delete
+      security:
+      - OAuth2PasswordBearer: []
+      parameters:
+      - name: item_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          title: Item Id
+      responses:
+        '200':
+          description: Товар успешно удален из корзины
+          content:
+            application/json:
+              schema: {}
+        '401':
+          description: Неавторизованный доступ
+        '404':
+          description: Товар в корзине не найден
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+  "/cart/clearCart":
+    delete:
+      tags:
+      - Cart
+      summary: Очистить корзину
+      description: Удаляет все товары из корзины текущего пользователя.
+      operationId: clear_cart_cart_clearCart_delete
+      responses:
+        '200':
+          description: Корзина успешно очищена
+          content:
+            application/json:
+              schema: {}
+        '401':
+          description: Неавторизованный доступ
+      security:
+      - OAuth2PasswordBearer: []
+  "/users/listUsers":
+    get:
+      tags:
+      - Users
+      summary: Список пользователей
+      description: Получение списка всех пользователей (только для администратора).
+      operationId: list_users_users_listUsers_get
+      security:
+      - OAuth2PasswordBearer: []
+      parameters:
+      - name: skip
+        in: query
+        required: false
+        schema:
+          type: integer
+          default: 0
+          title: Skip
+      - name: limit
+        in: query
+        required: false
+        schema:
+          type: integer
+          default: 100
+          title: Limit
+      responses:
+        '200':
+          description: Список пользователей
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  "$ref": "#/components/schemas/UserResponse"
+                title: Response List Users Users Listusers Get
+        '401':
+          description: Неавторизованный доступ
+        '403':
+          description: Недостаточно прав
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+  "/users/getUser/{user_id}":
+    get:
+      tags:
+      - Users
+      summary: Получить информацию о пользователе
+      description: Возвращает информацию о пользователе по его ID (только для администратора).
+      operationId: get_user_users_getUser__user_id__get
+      security:
+      - OAuth2PasswordBearer: []
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          title: User Id
+      responses:
+        '200':
+          description: Информация о пользователе
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/UserResponse"
+        '401':
+          description: Неавторизованный доступ
+        '403':
+          description: Недостаточно прав
+        '404':
+          description: Пользователь не найден
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+  "/users/deactivateUser/{user_id}":
+    put:
+      tags:
+      - Users
+      summary: Деактивировать пользователя
+      description: Деактивирует учетную запись пользователя (только для администратора).
+      operationId: deactivate_user_users_deactivateUser__user_id__put
+      security:
+      - OAuth2PasswordBearer: []
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          title: User Id
+      responses:
+        '200':
+          description: Пользователь успешно деактивирован
+          content:
+            application/json:
+              schema: {}
+        '401':
+          description: Неавторизованный доступ
+        '403':
+          description: Недостаточно прав
+        '404':
+          description: Пользователь не найден
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+  "/users/activateUser/{user_id}":
+    put:
+      tags:
+      - Users
+      summary: Активировать пользователя
+      description: Активирует учетную запись пользователя (только для администратора).
+      operationId: activate_user_users_activateUser__user_id__put
+      security:
+      - OAuth2PasswordBearer: []
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          title: User Id
+      responses:
+        '200':
+          description: Пользователь успешно активирован
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/UserResponse"
+        '401':
+          description: Неавторизованный доступ
+        '403':
+          description: Недостаточно прав
+        '404':
+          description: Пользователь не найден
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+  "/orders/createOrder":
+    post:
+      tags:
+      - Orders
+      summary: Создать заказ
+      description: Создает новый заказ на основе текущей корзины пользователя. После
+        создания заказа корзина очищается.
+      operationId: create_order_orders_createOrder_post
+      responses:
+        '200':
+          description: Заказ успешно создан
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/OrderResponse"
+        '400':
+          description: Корзина пуста
+        '401':
+          description: Неавторизованный доступ
+      security:
+      - OAuth2PasswordBearer: []
+  "/orders/myOrders":
+    get:
+      tags:
+      - Orders
+      summary: Мои заказы
+      description: Возвращает список всех заказов текущего пользователя.
+      operationId: get_my_orders_orders_myOrders_get
+      responses:
+        '200':
+          description: Список заказов пользователя
+          content:
+            application/json:
+              schema:
+                items:
+                  "$ref": "#/components/schemas/OrderResponse"
+                type: array
+                title: Response Get My Orders Orders Myorders Get
+        '401':
+          description: Неавторизованный доступ
+      security:
+      - OAuth2PasswordBearer: []
+  "/orders/myOrders/{order_id}":
+    get:
+      tags:
+      - Orders
+      summary: Детали заказа
+      description: Возвращает детали конкретного заказа текущего пользователя.
+      operationId: get_order_details_orders_myOrders__order_id__get
+      security:
+      - OAuth2PasswordBearer: []
+      parameters:
+      - name: order_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          title: Order Id
+      responses:
+        '200':
+          description: Детали заказа
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/OrderResponse"
+        '401':
+          description: Неавторизованный доступ
+        '404':
+          description: Заказ не найден
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+  "/orders/cancelOrder/{order_id}":
+    delete:
+      tags:
+      - Orders
+      summary: Отмена заказа
+      description: Позволяет пользователю отменить свой заказ, если он еще не обработан.
+      operationId: cancel_order_orders_cancelOrder__order_id__delete
+      security:
+      - OAuth2PasswordBearer: []
+      parameters:
+      - name: order_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          title: Order Id
+      responses:
+        '200':
+          description: Заказ отменен
+          content:
+            application/json:
+              schema: {}
+        '400':
+          description: Заказ не может быть отменен
+        '401':
+          description: Неавторизованный доступ
+        '404':
+          description: Заказ не найден
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+  "/orders/listOrders":
+    get:
+      tags:
+      - Orders
+      summary: Список всех заказов
+      description: Возвращает список всех заказов (только для администратора).
+      operationId: list_all_orders_orders_listOrders_get
+      responses:
+        '200':
+          description: Список всех заказов
+          content:
+            application/json:
+              schema:
+                items:
+                  "$ref": "#/components/schemas/OrderResponse"
+                type: array
+                title: Response List All Orders Orders Listorders Get
+        '401':
+          description: Неавторизованный доступ
+        '403':
+          description: Недостаточно прав
+      security:
+      - OAuth2PasswordBearer: []
+  "/orders/updateOrderStatus/{order_id}":
+    put:
+      tags:
+      - Orders
+      summary: Обновить статус заказа
+      description: Позволяет администратору обновить статус заказа.
+      operationId: update_order_status_orders_updateOrderStatus__order_id__put
+      security:
+      - OAuth2PasswordBearer: []
+      parameters:
+      - name: order_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          title: Order Id
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              "$ref": "#/components/schemas/OrderStatusUpdate"
+      responses:
+        '200':
+          description: Статус заказа обновлен
+          content:
+            application/json:
+              schema: {}
+        '401':
+          description: Неавторизованный доступ
+        '403':
+          description: Недостаточно прав
+        '404':
+          description: Заказ не найден
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+  "/orders/getOrder/{order_id}":
+    get:
+      tags:
+      - Orders
+      summary: Получить детали заказа
+      description: Возвращает детали указанного заказа (только для администратора).
+      operationId: get_order_admin_orders_getOrder__order_id__get
+      security:
+      - OAuth2PasswordBearer: []
+      parameters:
+      - name: order_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          title: Order Id
+      responses:
+        '200':
+          description: Детали заказа
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/OrderResponse"
+        '401':
+          description: Неавторизованный доступ
+        '403':
+          description: Недостаточно прав
+        '404':
+          description: Заказ не найден
+        '422':
+          description: Validation Error
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/HTTPValidationError"
+  "/":
+    get:
+      tags:
+      - Main
+      summary: Главная страница
+      description: Добро пожаловать в сервис чистки обуви!
+      operationId: main_page__get
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema: {}
+components:
+  schemas:
+    Body_login_for_access_token_auth_login_post:
+      properties:
+        grant_type:
+          anyOf:
+          - type: string
+            pattern: password
+          - type: 'null'
+          title: Grant Type
+        username:
+          type: string
+          title: Username
+        password:
+          type: string
+          title: Password
+        scope:
+          type: string
+          title: Scope
+          default: ''
+        client_id:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Client Id
+        client_secret:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Client Secret
+      type: object
+      required:
+      - username
+      - password
+      title: Body_login_for_access_token_auth_login_post
+    CartItemCreate:
+      properties:
+        product_id:
+          type: integer
+          title: Product Id
+          description: ID продукта
+          example: 1
+        quantity:
+          type: integer
+          title: Quantity
+          description: Количество товара
+          example: 2
+      type: object
+      required:
+      - product_id
+      - quantity
+      title: CartItemCreate
+    CartItemResponse:
+      properties:
+        id:
+          type: integer
+          title: Id
+          description: ID элемента корзины
+          example: 1
+        product_id:
+          type: integer
+          title: Product Id
+          description: ID продукта
+          example: 1
+        product_name:
+          type: string
+          title: Product Name
+          description: Название продукта
+          example: Чистка кожаной обуви
+        product_price:
+          type: number
+          title: Product Price
+          description: Цена продукта
+          example: 49.99
+        quantity:
+          type: integer
+          title: Quantity
+          description: Количество товара
+          example: 2
+      type: object
+      required:
+      - id
+      - product_id
+      - product_name
+      - product_price
+      - quantity
+      title: CartItemResponse
+    HTTPValidationError:
+      properties:
+        detail:
+          items:
+            "$ref": "#/components/schemas/ValidationError"
+          type: array
+          title: Detail
+      type: object
+      title: HTTPValidationError
+    OrderItemResponse:
+      properties:
+        product_id:
+          type: integer
+          title: Product Id
+        product_name:
+          type: string
+          title: Product Name
+        quantity:
+          type: integer
+          title: Quantity
+        price:
+          type: number
+          title: Price
+      type: object
+      required:
+      - product_id
+      - product_name
+      - quantity
+      - price
+      title: OrderItemResponse
+    OrderResponse:
+      properties:
+        id:
+          type: integer
+          title: Id
+        order_date:
+          type: string
+          format: date-time
+          title: Order Date
+        status:
+          "$ref": "#/components/schemas/OrderStatus"
+        total_price:
+          type: number
+          title: Total Price
+        items:
+          items:
+            "$ref": "#/components/schemas/OrderItemResponse"
+          type: array
+          title: Items
+      type: object
+      required:
+      - id
+      - order_date
+      - status
+      - total_price
+      - items
+      title: OrderResponse
+    OrderStatus:
+      type: string
+      enum:
+      - В ожидании
+      - В обработке
+      - Отправлен
+      - Доставлен
+      - Отменен
+      title: OrderStatus
+    OrderStatusUpdate:
+      properties:
+        status:
+          "$ref": "#/components/schemas/OrderStatus"
+          description: Новый статус заказа
+          example: processing
+      type: object
+      required:
+      - status
+      title: OrderStatusUpdate
+    ProductCreate:
+      properties:
+        name:
+          type: string
+          title: Name
+          description: Название продукта
+          example: Чистка кожаной обуви
+        description:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Description
+          description: Описание продукта
+          example: Профессиональная чистка кожаной обуви
+        price:
+          type: number
+          title: Price
+          description: Цена продукта
+          example: 49.99
+        category:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Category
+          description: Категория продукта
+          example: Чистка
+        image_url:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Image Url
+          description: URL изображения продукта
+          example: http://example.com/images/cleaning.jpg
+      type: object
+      required:
+      - name
+      - price
+      title: ProductCreate
+    ProductResponse:
+      properties:
+        name:
+          type: string
+          title: Name
+          description: Название продукта
+          example: Чистка кожаной обуви
+        description:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Description
+          description: Описание продукта
+          example: Профессиональная чистка кожаной обуви
+        price:
+          type: number
+          title: Price
+          description: Цена продукта
+          example: 49.99
+        category:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Category
+          description: Категория продукта
+          example: Чистка
+        image_url:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Image Url
+          description: URL изображения продукта
+          example: http://example.com/images/cleaning.jpg
+        id:
+          type: integer
+          title: Id
+          description: ID продукта
+          example: 1
+        available:
+          type: integer
+          title: Available
+          description: Доступность продукта (1 - доступен, 0 - недоступен)
+          example: 1
+      type: object
+      required:
+      - name
+      - price
+      - id
+      - available
+      title: ProductResponse
+    ProductUpdate:
+      properties:
+        name:
+          type: string
+          title: Name
+          description: Название продукта
+          example: Чистка кожаной обуви
+        description:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Description
+          description: Описание продукта
+          example: Профессиональная чистка кожаной обуви
+        price:
+          type: number
+          title: Price
+          description: Цена продукта
+          example: 49.99
+        category:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Category
+          description: Категория продукта
+          example: Чистка
+        image_url:
+          anyOf:
+          - type: string
+          - type: 'null'
+          title: Image Url
+          description: URL изображения продукта
+          example: http://example.com/images/cleaning.jpg
+        available:
+          anyOf:
+          - type: integer
+          - type: 'null'
+          title: Available
+          description: Доступность продукта (1 - доступен, 0 - недоступен)
+          example: 1
+      type: object
+      required:
+      - name
+      - price
+      title: ProductUpdate
+    Token:
+      properties:
+        access_token:
+          type: string
+          title: Access Token
+          description: Токен доступа
+          example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+        token_type:
+          type: string
+          title: Token Type
+          description: Тип токена
+          example: bearer
+      type: object
+      required:
+      - access_token
+      - token_type
+      title: Token
+    UserCreate:
+      properties:
+        username:
+          type: string
+          title: Username
+          description: Имя пользователя
+          example: john_doe
+        email:
+          type: string
+          format: email
+          title: Email
+          description: Email пользователя
+          example: john@example.com
+        password:
+          type: string
+          title: Password
+          description: Пароль пользователя
+          example: '1223456'
+      type: object
+      required:
+      - username
+      - email
+      - password
+      title: UserCreate
+    UserResponse:
+      properties:
+        username:
+          type: string
+          title: Username
+          description: Имя пользователя
+          example: john_doe
+        email:
+          type: string
+          format: email
+          title: Email
+          description: Email пользователя
+          example: john@example.com
+        id:
+          type: integer
+          title: Id
+          description: ID пользователя
+          example: 1
+        role:
+          "$ref": "#/components/schemas/UserRole"
+          description: Роль пользователя
+          example: client
+      type: object
+      required:
+      - username
+      - email
+      - id
+      - role
+      title: UserResponse
+    UserRole:
+      type: string
+      enum:
+      - client
+      - admin
+      title: UserRole
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+      type: object
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
+  securitySchemes:
+    OAuth2PasswordBearer:
+      type: oauth2
+      flows:
+        password:
+          scopes: {}
+          tokenUrl: "/auth/login"

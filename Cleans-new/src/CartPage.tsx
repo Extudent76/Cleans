@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import './index.css';
+import React, { useState, useEffect } from "react";
+import "./index.css";
+import { useStore } from "./store";
+import { Link } from "react-router-dom";
 
 interface CartItemData {
   id: number;
@@ -9,47 +11,32 @@ interface CartItemData {
 }
 
 const CartPage: React.FC = () => {
-  const [cartItems, setCartItems] = useState<CartItemData[]>([]);
+  const services = useStore((state) => state.services);
+  const setServices = useStore((state) => state.setServices);
+  const [cartItems, setCartItems] = useState<CartItemData[]>(services);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    const mockData: CartItemData[] = [
-      { id: 1, title: 'Чистка обуви', price: 800, count: 2 },
-      { id: 2, title: 'Ремонт обуви', price: 2000, count: 1 },
-      { id: 3, title: 'Полировка обуви', price: 500, count: 3 },
-    ];
     setTimeout(() => {
-      setCartItems(mockData);
       setIsLoading(false);
-    }, 1000);
+    }, 300);
   }, []);
 
   const handleRemoveItem = (id: number) => {
-    setCartItems(prevItems => prevItems.filter(item => item.id !== id));
+    setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
+    setServices(services.filter((item) => item.id != id));
   };
 
   const handleOrderSubmit = async () => {
-    const orderData = cartItems.map(({ id, count }) => ({ id, count }));
-
-    const response = await fetch('', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(orderData),
-    });
-
-    if (response.ok) {
-      alert('Заказ успешно оформлен!');
-      setCartItems([]); // Очистить корзину после успешного заказа
-    } else {
-      alert('Ошибка при оформлении заказа. Попробуйте еще раз.');
-      console.log(orderData);
-    }
+    alert("Заказ успешно оформлен!");
+    setCartItems([]); // Очистить корзину
   };
 
   const calculateTotal = () => {
-    return cartItems.reduce((total, item) => total + item.price * item.count, 0);
+    return cartItems.reduce(
+      (total, item) => total + item.price * item.count,
+      0,
+    );
   };
 
   return (
@@ -71,7 +58,7 @@ const CartPage: React.FC = () => {
                 </tr>
               </thead>
               <tbody>
-                {cartItems.map(item => (
+                {cartItems.map((item) => (
                   <tr key={item.id}>
                     <td>{item.title}</td>
                     <td>{item.price}</td>
@@ -88,7 +75,9 @@ const CartPage: React.FC = () => {
                   </tr>
                 ))}
                 <tr className="total-row">
-                  <td colSpan={3} className="total-label">Итого:</td>
+                  <td colSpan={3} className="total-label">
+                    Итого:
+                  </td>
                   <td>{calculateTotal()} руб.</td>
                   <td></td>
                 </tr>
@@ -100,7 +89,12 @@ const CartPage: React.FC = () => {
           </button>
         </>
       ) : (
-        <p>Корзина пуста</p>
+        <>
+          <p>Корзина пуста</p>
+          <Link className="order-button" to="/">
+            Вернуться назад
+          </Link>
+        </>
       )}
     </div>
   );
