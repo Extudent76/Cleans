@@ -4,6 +4,7 @@ import ServiceCard from "./component/ServiceCard";
 import "./index.css";
 import { useStore } from "./store";
 import { useNavigate } from "react-router-dom";
+import { useAlert, AlertModal } from "./Modal";
 
 interface Service {
   id: number;
@@ -45,6 +46,7 @@ const ServicesPage: React.FC = () => {
   }>({});
   const setServices = useStore((state) => state.setServices);
   const navigate = useNavigate();
+  const { showAlert, isOpen } = useAlert();
 
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -68,12 +70,16 @@ const ServicesPage: React.FC = () => {
         count,
       }));
     setServices(orderData);
-    alert("Услуги сохранены! Проверьте корзину!");
-    setTimeout(() => navigate("/"), 200);
+    showAlert();
   };
 
   return (
     <>
+      <AlertModal
+        isOpen={isOpen}
+        onClose={() => navigate("/")}
+        message={"Услуги сохранены! Проверьте корзину!"}
+      />
       {isLoading ? (
         <h2 style={{ textAlign: "center", paddingTop: "3%" }}>
           Загрузка услуг...

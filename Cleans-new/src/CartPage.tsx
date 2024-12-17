@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./index.css";
 import { useStore } from "./store";
 import { Link } from "react-router-dom";
+import { AlertModal, useAlert } from "./Modal";
 
 interface CartItemData {
   id: number;
@@ -15,6 +16,7 @@ const CartPage: React.FC = () => {
   const setServices = useStore((state) => state.setServices);
   const [cartItems, setCartItems] = useState<CartItemData[]>(services);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const { showAlert, isOpen, closeAlert } = useAlert();
 
   useEffect(() => {
     setTimeout(() => {
@@ -27,8 +29,8 @@ const CartPage: React.FC = () => {
     setServices(services.filter((item) => item.id != id));
   };
 
-  const handleOrderSubmit = async () => {
-    alert("Заказ успешно оформлен!");
+  const handleOrderSubmit = () => {
+    showAlert();
     setCartItems([]); // Очистить корзину
   };
 
@@ -42,6 +44,11 @@ const CartPage: React.FC = () => {
   return (
     <div className="cart-page">
       <h1>Корзина</h1>
+      <AlertModal
+        isOpen={isOpen}
+        onClose={closeAlert}
+        message={"Заказ успешно оформлен!"}
+      />
       {isLoading ? (
         <p>Загрузка корзины...</p>
       ) : cartItems.length > 0 ? (
